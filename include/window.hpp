@@ -14,6 +14,7 @@ namespace engine {
 			Window &operator=(const Window &) = delete;
 
 			bool shouldClose();
+			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);
 
 		private:
 			void initWindow();

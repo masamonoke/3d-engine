@@ -1,19 +1,26 @@
+include(./.env.cmake OPTIONAL RESULT_VARIABLE LOCAL_ENV)
+
 cmake_minimum_required(VERSION 3.22)
-project(3d_model_viewer)
+
+set(NAME 3d_model_viewer)
+project(${NAME})
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(GLFW "lib/glfw-3.3.8")
 
-include_directories(/Users/masamonoke/lib/vulkan/macOS/include)
-set(Vulkan_LIBRARY /Users/masamonoke/lib/vulkan/macOS/lib)
-set(Vulkan_INCLUDE_DIR /Users/masamonoke/lib/vulkan/macOS/include)
-find_package(Vulkan REQUIRED)
-
-add_subdirectory(${GLFW})
-include_directories(${GLFW}/include)
+include_directories(${GLFW_INCLUDE})
 
 include_directories(include)
 
-add_subdirectory(src)
+add_executable(${PROJECT_NAME} src/main.cpp src/window.cpp src/app.cpp src/pipeline.cpp src/engine_device.cpp)
 
+target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${Vulkan_INCLUDE_DIRS})
+target_link_directories(${PROJECT_NAME} PUBLIC ${Vulkan_LIBRARIES})
+
+find_package(glfw3 3.3 REQUIRED)
+set(GLFW_LIB glfw)
+message(STATUS "Found GLFW")
+
+target_link_libraries(${PROJECT_NAME} ${GLFW_LIB} vulkan)
