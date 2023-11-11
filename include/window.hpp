@@ -15,6 +15,9 @@ namespace engine {
 
 			bool shouldClose();
 			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);
+			VkExtent2D extent() {
+				return { static_cast<uint32_t>(width_), static_cast<uint32_t>(height_) };
+			}
 
 		private:
 			void initWindow();

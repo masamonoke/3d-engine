@@ -6,6 +6,7 @@
 #include <set>
 #include <unordered_set>
 
+
 namespace engine {
 	static VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback(
 		VkDebugUtilsMessageSeverityFlagBitsEXT message_severity,
@@ -79,7 +80,6 @@ namespace engine {
 		create_info.pApplicationInfo = &app_info;
 
 		auto extensions = getRequiredExtensions();
-		extensions.emplace_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
 		create_info.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
 		create_info.enabledExtensionCount = static_cast<uint32_t>(extensions.size());
 		create_info.ppEnabledExtensionNames = extensions.data();
@@ -231,6 +231,8 @@ namespace engine {
 		std::vector<const char*> extensions(glfw_extensions, glfw_extensions + glfw_extension_count);
 		if (this->enabledValidationLayers) {
 			extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
+			extensions.push_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
+			extensions.push_back(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME);
 		}
 		return extensions;
 	}
@@ -450,6 +452,10 @@ namespace engine {
 
 	QueueFamilyIndices EngineDevice::findPhysicalQueueFamilies() {
 		return this->findQueueFamilies(physicalDevice_);
+	}
+
+	SwapChainSupportDetails EngineDevice::swapChainSupport() {
+		return querySwapChainSupport(physicalDevice_);
 	}
 
 } // namespace engine

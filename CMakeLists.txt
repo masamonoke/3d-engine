@@ -12,9 +12,16 @@ include_directories(${GLFW_INCLUDE})
 
 include_directories(include)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/window.cpp src/app.cpp src/pipeline.cpp src/engine_device.cpp)
+add_executable(${PROJECT_NAME}
+	src/main.cpp
+	src/window.cpp
+	src/app.cpp
+	src/pipeline.cpp
+	src/engine_device.cpp
+	src/swap_chain.cpp)
 
-target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror)
+target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror -fsanitize=address)
+target_link_options(${PROJECT_NAME} PRIVATE -fsanitize=address)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${Vulkan_INCLUDE_DIRS})
 target_link_directories(${PROJECT_NAME} PUBLIC ${Vulkan_LIBRARIES})
