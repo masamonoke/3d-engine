@@ -5,6 +5,7 @@
 namespace engine {
 
 	App::App() {
+		loadModels();
 		createPipelineLayout();
 		createPipeline();
 		createCommandBuffers();
@@ -71,7 +72,8 @@ namespace engine {
 			render_pass_info.pClearValues = clear_values.data();
 			vkCmdBeginRenderPass(commandBuffers_[i], &render_pass_info, VK_SUBPASS_CONTENTS_INLINE);
 			pipeline_->bind(commandBuffers_[i]);
-			vkCmdDraw(commandBuffers_[i], 3, 1, 0, 0);
+			model_->bind(commandBuffers_[i]);
+			model_->draw(commandBuffers_[i]);
 			vkCmdEndRenderPass(commandBuffers_[i]);
 			if (vkEndCommandBuffer(commandBuffers_[i]) != VK_SUCCESS) {
 				std::runtime_error("failed to record command buffer");
@@ -89,5 +91,31 @@ namespace engine {
 		if (res != VK_SUCCESS) {
 			throw std::runtime_error("failed to present swap chain image");
 		}
+	}
+
+	void sierpinsky(std::vector<Model::Vertex>& vertices, int depth, glm::vec2 left, glm::vec2 right, glm::vec2 top) {
+		if (depth <= 0) {
+			vertices.push_back({{top}, {1.0f, 0.0f, 0.0f}});
+			vertices.push_back({{right}, {0.0f, 1.0f, 0.0f}});
+			vertices.push_back({{left}, {0.0f, 0.0f, 1.0f}});
+		} else {
+			auto left_top = 0.5f * (left + top);
+			auto right_top = 0.5f * (right + top);
+			auto left_right = 0.5f * (left + right);
+			sierpinsky(vertices, depth - 1, left, left_right, left_top);
+			sierpinsky(vertices, depth - 1, left_right, right, right_top);
+			sierpinsky(vertices, depth - 1, left_top, right_top, top);
+		}
+	}
+
+	void App::loadModels() {
+		std::vector<Model::Vertex> vertices = {
+			{{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
+			{{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
+			{{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
+		};
+		/* std::vector<Model::Vertex> vertices = {}; */
+		/* sierpinsky(vertices, 5, {-0.5f, 0.5f}, {0.5f, 0.5f}, {0.0f, -0.5f}); */
+		model_ = std::make_unique<Model>(device_, vertices);
 	}
 }

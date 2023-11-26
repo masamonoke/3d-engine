@@ -9,6 +9,7 @@
 #include "pipeline.hpp"
 #include "engine_device.hpp"
 #include "swap_chain.hpp"
+#include "model.hpp"
 
 namespace engine {
 	class App {
@@ -31,11 +32,13 @@ namespace engine {
 			std::unique_ptr<Pipeline> pipeline_;
 			VkPipelineLayout pipelineLayout_;
 			std::vector<VkCommandBuffer> commandBuffers_;
+			std::unique_ptr<Model> model_;
 
 			void createPipelineLayout();
 			void createPipeline();
 			void createCommandBuffers();
 			void drawFrame();
+			void loadModels();
 	};
 }
 

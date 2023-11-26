@@ -13,9 +13,23 @@ namespace engine {
 		VkDebugUtilsMessageTypeFlagsEXT message_type,
 		const VkDebugUtilsMessengerCallbackDataEXT* callback_data,
 		void* user_data) {
-		UNUSED(message_severity);
 		UNUSED(message_type);
 		UNUSED(user_data);
+		switch (message_severity) {
+			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT:
+				std::cerr << "[DIAGNOSTIC] ";
+				break;
+			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT:
+				std::cerr << "[INFO] ";
+				break;
+			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT:
+				std::cerr << "[ERROR] ";
+				break;
+			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT:
+				std::cerr << "[WARNING] ";
+			default:
+				break;
+		}
 		std::cerr << "validation layer: " << callback_data->pMessage << std::endl;
 		return VK_FALSE;
 	}
