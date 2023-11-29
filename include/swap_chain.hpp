@@ -16,7 +16,7 @@ namespace engine {
 			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent);
 			~SwapChain();
 			SwapChain(const SwapChain&) = delete;
-			void operator=(const SwapChain&) = delete;
+			SwapChain& operator=(const SwapChain&) = delete;
 
 			VkFramebuffer getFrameBuffer(int index) {
 				return swapChainFrameBuffers_[index];

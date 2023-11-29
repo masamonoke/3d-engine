@@ -20,7 +20,7 @@ namespace engine {
 			App();
 			~App();
 			App(const App&) = delete;
-			App &operator=(const App&) = delete;
+			App& operator=(const App&) = delete;
 
 			void run();
 

@@ -11,7 +11,7 @@ namespace engine {
 			Window(int w, int h, std::string title);
 			~Window();
 			Window(const Window &) = delete;
-			Window &operator=(const Window &) = delete;
+			Window& operator=(const Window &) = delete;
 
 			bool shouldClose();
 			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);

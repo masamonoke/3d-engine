@@ -26,7 +26,7 @@ namespace engine {
 			Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info);
 			~Pipeline();
 			Pipeline(const Pipeline&) = delete;
-			void operator=(const Pipeline&) = delete;
+			Pipeline& operator=(const Pipeline&) = delete;
 
 			static PipelineConfigInfo defaultPipelineConfigInfo(uint32_t width, uint32_t height);
 			void bind(VkCommandBuffer command_buffer);
