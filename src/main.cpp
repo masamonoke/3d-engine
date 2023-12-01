@@ -2,9 +2,9 @@
 #include <stdexcept>
 
 #include "app.hpp"
+#include "window.hpp"
 
 int main() {
-
 	auto app = engine::App {};
 	try {
 		app.run();

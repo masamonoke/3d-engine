@@ -9,13 +9,14 @@
 #include <stdexcept>
 
 namespace engine {
-	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent) : device_(device), windowExtent_(extent) {
-		createSwapChain();
-		createImageViews();
-		createRenderPass();
-		createDepthResources();
-		createFrameBuffers();
-		createSyncObjects();
+	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent) : device_{ device }, windowExtent_{ extent } {
+		init();
+	}
+
+	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent, std::shared_ptr<SwapChain> previous) : device_{ device }, windowExtent_{ extent },
+		oldSwapChain_{ previous } {
+		init();
+		oldSwapChain_ = nullptr;
 	}
 
 	SwapChain::~SwapChain() {
@@ -131,7 +132,7 @@ namespace engine {
 		create_info.compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR;
 		create_info.presentMode = present_mode;
 		create_info.clipped = VK_TRUE;
-		create_info.oldSwapchain = VK_NULL_HANDLE;
+		create_info.oldSwapchain = oldSwapChain_ == nullptr ? VK_NULL_HANDLE : oldSwapChain_->swapChain_;
 		if (vkCreateSwapchainKHR(device_.device(), &create_info, nullptr, &swapChain_) != VK_SUCCESS) {
 			throw std::runtime_error("failed to create swap chain");
 		}
@@ -339,6 +340,15 @@ namespace engine {
 			{ VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT },
 			VK_IMAGE_TILING_OPTIMAL,
 			VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT);
+	}
+
+	void SwapChain::init() {
+		createSwapChain();
+		createImageViews();
+		createRenderPass();
+		createDepthResources();
+		createFrameBuffers();
+		createSyncObjects();
 	}
 
 }

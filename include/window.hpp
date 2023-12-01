@@ -18,12 +18,19 @@ namespace engine {
 			VkExtent2D extent() {
 				return { static_cast<uint32_t>(width_), static_cast<uint32_t>(height_) };
 			}
+			bool wasResized() { return frameBufferResized_; }
+			void resetWindowResize() { frameBufferResized_ = false; }
 
 		private:
+			static void frameBufferResizedCallback(GLFWwindow* window, int width, int height);
+			int width_;
+			int height_;
+			bool frameBufferResized_ = false;
 			void initWindow();
+			static int w_;
+			static int h_;
+			static int frame_buffer_resized_;
 
-			const int width_;
-			const int height_;
 			GLFWwindow* window_;
 			std::string title_;
 	};

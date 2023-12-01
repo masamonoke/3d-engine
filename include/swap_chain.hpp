@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 
 namespace engine {
 	class SwapChain {
@@ -14,6 +15,7 @@ namespace engine {
 			static constexpr int MAX_FRAMES = 2;
 
 			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent);
+			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent, std::shared_ptr<SwapChain> previous);
 			~SwapChain();
 			SwapChain(const SwapChain&) = delete;
 			SwapChain& operator=(const SwapChain&) = delete;
@@ -69,6 +71,7 @@ namespace engine {
 			std::vector<VkFence> inFlightFences_;
 			std::vector<VkFence> imagesInFlight_;
 			size_t currentFrame_ = 0;
+			std::shared_ptr<SwapChain> oldSwapChain_;
 
 			void createSwapChain();
 			void createImageViews();
@@ -80,6 +83,7 @@ namespace engine {
 			VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& available_formats);
 			VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& capabilities);
 			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
+			void init();
 	};
 }
 

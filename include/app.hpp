@@ -28,7 +28,7 @@ namespace engine {
 			Window window_ { WIDTH, HEIGHT, "App" };
 			EngineDevice device_ { window_ };
 			PipelineConfigInfo configInfo {};
-			SwapChain swapChain_ { device_, window_.extent() };
+			std::unique_ptr<SwapChain> swapChain_;
 			std::unique_ptr<Pipeline> pipeline_;
 			VkPipelineLayout pipelineLayout_;
 			std::vector<VkCommandBuffer> commandBuffers_;
@@ -39,6 +39,9 @@ namespace engine {
 			void createCommandBuffers();
 			void drawFrame();
 			void loadModels();
+			void recreateSwapChain();
+			void recordCommandBuffer(int image_index);
+			void freeCommandBuffers();
 	};
 }
 
