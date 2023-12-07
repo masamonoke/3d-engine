@@ -9,19 +9,11 @@
 #include <glm/glm.hpp>
 
 #include "window.hpp"
-#include "pipeline.hpp"
 #include "engine_device.hpp"
-#include "swap_chain.hpp"
-/* #include "model.hpp" */
 #include "scene_object.hpp"
+#include "renderer.hpp"
 
 namespace engine {
-
-	struct PushConstantData {
-		glm::mat2 transform { 1.f };
-		glm::vec2 offset;
-		alignas(16) glm::vec3 color;
-	};
 
 	class App {
 		public:
@@ -38,24 +30,12 @@ namespace engine {
 		private:
 			Window window_ { WIDTH, HEIGHT, "App" };
 			EngineDevice device_ { window_ };
-			PipelineConfigInfo configInfo {};
-			std::unique_ptr<SwapChain> swapChain_;
-			std::unique_ptr<Pipeline> pipeline_;
-			VkPipelineLayout pipelineLayout_;
-			std::vector<VkCommandBuffer> commandBuffers_;
-			/* std::unique_ptr<Model> model_; */
 			std::vector<SceneObject> sceneObjects_;
+			Renderer renderer_ { window_, device_ };
 
-			void createPipelineLayout();
-			void createPipeline();
-			void createCommandBuffers();
-			void drawFrame();
 			void loadSceneObjects();
-			void recreateSwapChain();
-			void recordCommandBuffer(int image_index);
-			void freeCommandBuffers();
-			void renderSceneObjects(VkCommandBuffer cmd_buf);
 	};
+
 }
 
 #endif // APP_H

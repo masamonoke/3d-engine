@@ -51,10 +51,13 @@ namespace engine {
 			VkFormat findDepthFormat();
 			VkResult acquireNextImage(uint32_t* image_idx);
 			VkResult submitCommandBuffers(const VkCommandBuffer* buffers, uint32_t* image_idx);
-
+			bool compareSwapFormats(const SwapChain& other) const {
+				return other.swapChainDepthFormat_ == this->swapChainDepthFormat_ && other.swapChainImageFormat_ == this->swapChainImageFormat_;
+			}
 
 		private:
 			VkFormat swapChainImageFormat_;
+			VkFormat swapChainDepthFormat_;
 			VkExtent2D swapChainExtent_;
 			std::vector<VkFramebuffer> swapChainFrameBuffers_;
 			VkRenderPass renderPass_;

@@ -247,10 +247,14 @@ namespace engine {
 
 	void SwapChain::createDepthResources() {
 		auto depth_format = this->findDepthFormat();
+		swapChainDepthFormat_ = depth_format;
 		auto swap_chain_extent = this->getSwapChainExtent();
+
+
 		depthImages_.resize(this->imageCount());
 		depthImageMemories_.resize(this->imageCount());
 		depthImageViews_.resize(this->imageCount());
+
 		for (size_t i = 0; i < depthImages_.size(); i++) {
 			VkImageCreateInfo image_info {};
 			image_info.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;

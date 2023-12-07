@@ -30,6 +30,8 @@ add_executable(${PROJECT_NAME}
 	src/engine_device.cpp
 	src/swap_chain.cpp
 	src/model.cpp
+	src/renderer.cpp
+	src/render_system.cpp
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror -fsanitize=address)
