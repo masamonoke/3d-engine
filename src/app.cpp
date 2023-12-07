@@ -30,37 +30,69 @@ namespace engine {
 		vkDeviceWaitIdle(device_.device());
 	}
 
-	void sierpinsky(std::vector<Model::Vertex>& vertices, int depth, glm::vec2 left, glm::vec2 right, glm::vec2 top) {
-		if (depth <= 0) {
-			vertices.push_back({{top}, {1.0f, 0.0f, 0.0f}});
-			vertices.push_back({{right}, {0.0f, 1.0f, 0.0f}});
-			vertices.push_back({{left}, {0.0f, 0.0f, 1.0f}});
-		} else {
-			auto left_top = 0.5f * (left + top);
-			auto right_top = 0.5f * (right + top);
-			auto left_right = 0.5f * (left + right);
-			sierpinsky(vertices, depth - 1, left, left_right, left_top);
-			sierpinsky(vertices, depth - 1, left_right, right, right_top);
-			sierpinsky(vertices, depth - 1, left_top, right_top, top);
+	std::unique_ptr<Model> createCube(EngineDevice& device, glm::vec3 offset) {
+		std::vector<Model::Vertex> vertices {
+			// left face (white)
+			{{-.5f, -.5f, -.5f}, {.9f, .9f, .9f}},
+			{{-.5f, .5f, .5f}, {.9f, .9f, .9f}},
+			{{-.5f, -.5f, .5f}, {.9f, .9f, .9f}},
+			{{-.5f, -.5f, -.5f}, {.9f, .9f, .9f}},
+			{{-.5f, .5f, -.5f}, {.9f, .9f, .9f}},
+			{{-.5f, .5f, .5f}, {.9f, .9f, .9f}},
+
+			// right face (yellow)
+			{{.5f, -.5f, -.5f}, {.8f, .8f, .1f}},
+			{{.5f, .5f, .5f}, {.8f, .8f, .1f}},
+			{{.5f, -.5f, .5f}, {.8f, .8f, .1f}},
+			{{.5f, -.5f, -.5f}, {.8f, .8f, .1f}},
+			{{.5f, .5f, -.5f}, {.8f, .8f, .1f}},
+			{{.5f, .5f, .5f}, {.8f, .8f, .1f}},
+
+			// top face (orange, remember y axis points down)
+			{{-.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
+			{{.5f, -.5f, .5f}, {.9f, .6f, .1f}},
+			{{-.5f, -.5f, .5f}, {.9f, .6f, .1f}},
+			{{-.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
+			{{.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
+			{{.5f, -.5f, .5f}, {.9f, .6f, .1f}},
+
+			// bottom face (red)
+			{{-.5f, .5f, -.5f}, {.8f, .1f, .1f}},
+			{{.5f, .5f, .5f}, {.8f, .1f, .1f}},
+			{{-.5f, .5f, .5f}, {.8f, .1f, .1f}},
+			{{-.5f, .5f, -.5f}, {.8f, .1f, .1f}},
+			{{.5f, .5f, -.5f}, {.8f, .1f, .1f}},
+			{{.5f, .5f, .5f}, {.8f, .1f, .1f}},
+
+			// nose face (blue)
+			{{-.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
+			{{.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
+			{{-.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
+			{{-.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
+			{{.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
+			{{.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
+
+			// tail face (green)
+			{{-.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
+			{{.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
+			{{-.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
+			{{-.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
+			{{.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
+			{{.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
+		};
+		for (auto& v : vertices) {
+			v.position += offset;
 		}
+		return std::make_unique<Model>(device, vertices);
 	}
 
 	void App::loadSceneObjects() {
-		std::vector<Model::Vertex> vertices = {
-			{{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-			{{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
-			{{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
-		};
-		/* std::vector<Model::Vertex> vertices = {}; */
-		/* sierpinsky(vertices, 5, {-0.5f, 0.5f}, {0.5f, 0.5f}, {0.0f, -0.5f}); */
-		auto model = std::make_shared<Model>(device_, vertices);
-		auto triangle = SceneObject::createObject();
-		triangle.model = model;
-		triangle.color = { 0.1f, 0.8f, 0.1f };
-		triangle.transform2d.translation.x = 0.2f;
-		triangle.transform2d.scale = { 2.0f, 0.5f };
-		triangle.transform2d.rotation = 0.25f * glm::two_pi<float>();
-		sceneObjects_.push_back(std::move(triangle));
+		std::shared_ptr<Model> model = createCube(device_, { 0.0f, 0.0f, 0.0f });
+		auto cube = SceneObject::createObject();
+		cube.model = model;
+		cube.transform.translation = { 0.0f, 0.0f, 0.5f };
+		cube.transform.scale = { 0.5f, 0.5f, 0.5f };
+		sceneObjects_.push_back(std::move(cube));
 	}
 
 }
