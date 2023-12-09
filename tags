@@ -1,0 +1,825 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APP_H	include/app.hpp	/^#define APP_H$/;"	d
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
+App	include/app.hpp	/^			App();$/;"	p	class:engine::App	access:public	signature:()
+App	include/app.hpp	/^			App(const App&) = delete;$/;"	p	class:engine::App	access:public	signature:(const App&)
+App	include/app.hpp	/^	class App {$/;"	c	namespace:engine
+App	src/app.cpp	/^	App::App() {$/;"	f	class:engine::App	signature:()
+CAMERA_HPP	include/camera.hpp	/^#define CAMERA_HPP$/;"	d
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/Users\/masamonoke\/dev\/projects\/original\/3d-engine\/build$/;"	m
+CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/opt\/homebrew\/Cellar\/cmake\/3.27.7\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/Users\/masamonoke\/dev\/projects\/original\/3d-engine$/;"	m
+COMPILER_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
+COMPILER_VERSION	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
+COMPILER_VERSION	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
+COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+CXX_STD	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
+CXX_STD	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
+CXX_STD	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
+C_VERSION	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
+C_VERSION	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
+C_VERSION	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
+Camera	include/camera.hpp	/^	class Camera {$/;"	c	namespace:engine
+DEC	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
+DEC	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
+ENGINE_DEVICE_HPP	include/engine_device.hpp	/^#define ENGINE_DEVICE_HPP$/;"	d
+EQUALS	build/Makefile	/^EQUALS = =$/;"	m
+EngineDevice	include/engine_device.hpp	/^			EngineDevice(EngineDevice&&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(EngineDevice&&)
+EngineDevice	include/engine_device.hpp	/^			EngineDevice(Window& window);$/;"	p	class:engine::EngineDevice	access:public	signature:(Window& window)
+EngineDevice	include/engine_device.hpp	/^			EngineDevice(const EngineDevice&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(const EngineDevice&)
+EngineDevice	include/engine_device.hpp	/^	class EngineDevice {$/;"	c	namespace:engine
+EngineDevice	src/engine_device.cpp	/^	EngineDevice::EngineDevice(Window& window): window_{window}  {$/;"	f	class:engine::EngineDevice	signature:(Window& window)
+GLFW_INCLUDE_VULKAN	include/window.hpp	/^#define GLFW_INCLUDE_VULKAN$/;"	d
+GLM_FORCE_DEPTH_ZERO_TO_ONE	include/app.hpp	/^#define GLM_FORCE_DEPTH_ZERO_TO_ONE$/;"	d
+GLM_FORCE_DEPTH_ZERO_TO_ONE	include/camera.hpp	/^#define GLM_FORCE_DEPTH_ZERO_TO_ONE$/;"	d
+GLM_FORCE_DEPTH_ZERO_TO_ONE	include/model.hpp	/^#define GLM_FORCE_DEPTH_ZERO_TO_ONE$/;"	d
+GLM_FORCE_DEPTH_ZERO_TO_ONE	include/render_system.hpp	/^#define GLM_FORCE_DEPTH_ZERO_TO_ONE$/;"	d
+GLM_FORCE_RADIANS	include/app.hpp	/^#define GLM_FORCE_RADIANS$/;"	d
+GLM_FORCE_RADIANS	include/camera.hpp	/^#define GLM_FORCE_RADIANS$/;"	d
+GLM_FORCE_RADIANS	include/model.hpp	/^#define GLM_FORCE_RADIANS$/;"	d
+GLM_FORCE_RADIANS	include/render_system.hpp	/^#define GLM_FORCE_RADIANS$/;"	d
+HEIGHT	include/app.hpp	/^			static constexpr int HEIGHT = 720;$/;"	m	class:engine::App	access:public
+HEX	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
+HEX	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
+ID_VOID_MAIN	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
+MAX_FRAMES	include/swap_chain.hpp	/^			static constexpr int MAX_FRAMES = 2;$/;"	m	class:engine::SwapChain	access:public
+MODEL_HPP	include/model.hpp	/^#define MODEL_HPP$/;"	d
+Model	include/model.hpp	/^			Model(EngineDevice& device, const std::vector<Vertex>& vertices);$/;"	p	class:engine::Model	access:public	signature:(EngineDevice& device, const std::vector<Vertex>& vertices)
+Model	include/model.hpp	/^			Model(const Model&) = delete;$/;"	p	class:engine::Model	access:public	signature:(const Model&)
+Model	include/model.hpp	/^	class Model {$/;"	c	namespace:engine
+Model	src/model.cpp	/^	Model::Model(EngineDevice& device, const std::vector<Vertex>& vertices) : device_{device} {$/;"	f	class:engine::Model	signature:(EngineDevice& device, const std::vector<Vertex>& vertices)
+PIPELINE_HPP	include/pipeline.hpp	/^#define PIPELINE_HPP$/;"	d
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
+Pipeline	include/pipeline.hpp	/^			Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info);$/;"	p	class:engine::Pipeline	access:public	signature:(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+Pipeline	include/pipeline.hpp	/^			Pipeline(const Pipeline&) = delete;$/;"	p	class:engine::Pipeline	access:public	signature:(const Pipeline&)
+Pipeline	include/pipeline.hpp	/^	class Pipeline {$/;"	c	namespace:engine
+Pipeline	src/pipeline.cpp	/^	Pipeline::Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) : device_(device) {$/;"	f	class:engine::Pipeline	signature:(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+PipelineConfigInfo	include/pipeline.hpp	/^	struct PipelineConfigInfo {$/;"	s	namespace:engine
+PushConstantData	src/render_system.cpp	/^	struct PushConstantData {$/;"	s	namespace:engine	file:
+QueueFamilyIndices	include/engine_device.hpp	/^	struct QueueFamilyIndices {$/;"	s	namespace:engine
+RENDERER_HPP	include/renderer.hpp	/^#define RENDERER_HPP$/;"	d
+RENDER_SYSTEM_HPP	include/render_system.hpp	/^#define RENDER_SYSTEM_HPP$/;"	d
+RM	build/Makefile	/^RM = \/opt\/homebrew\/Cellar\/cmake\/3.27.7\/bin\/cmake -E rm -f$/;"	m
+RenderSystem	include/render_system.hpp	/^			RenderSystem(EngineDevice& device, VkRenderPass render_pass);$/;"	p	class:engine::RenderSystem	access:public	signature:(EngineDevice& device, VkRenderPass render_pass)
+RenderSystem	include/render_system.hpp	/^			RenderSystem(const RenderSystem&) = delete;$/;"	p	class:engine::RenderSystem	access:public	signature:(const RenderSystem&)
+RenderSystem	include/render_system.hpp	/^	class RenderSystem {$/;"	c	namespace:engine
+RenderSystem	src/render_system.cpp	/^	RenderSystem::RenderSystem(EngineDevice& device, VkRenderPass render_pass) : device_{ device }  {$/;"	f	class:engine::RenderSystem	signature:(EngineDevice& device, VkRenderPass render_pass)
+Renderer	include/renderer.hpp	/^			Renderer(Window& window, EngineDevice& device);$/;"	p	class:engine::Renderer	access:public	signature:(Window& window, EngineDevice& device)
+Renderer	include/renderer.hpp	/^			Renderer(const Renderer&) = delete;$/;"	p	class:engine::Renderer	access:public	signature:(const Renderer&)
+Renderer	include/renderer.hpp	/^	class Renderer {$/;"	c	namespace:engine
+Renderer	src/renderer.cpp	/^	Renderer::Renderer(Window& window, EngineDevice& device) : window_ { window }, device_ { device } {$/;"	f	class:engine::Renderer	signature:(Window& window, EngineDevice& device)
+SCENE_OBJECT_HPP	include/scene_object.hpp	/^#define SCENE_OBJECT_HPP$/;"	d
+SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_ID /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
+STRINGIFY	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
+SWAP_CHAIN_HPP	include/swap_chain.hpp	/^#define SWAP_CHAIN_HPP$/;"	d
+SceneObject	include/scene_object.hpp	/^			SceneObject(SceneObject&&) = default;$/;"	p	class:engine::SceneObject	access:public	signature:(SceneObject&&)
+SceneObject	include/scene_object.hpp	/^			SceneObject(id_t id) : id_(id) {}$/;"	f	class:engine::SceneObject	access:private	signature:(id_t id)
+SceneObject	include/scene_object.hpp	/^	class SceneObject {$/;"	c	namespace:engine
+SwapChain	include/swap_chain.hpp	/^			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent);$/;"	p	class:engine::SwapChain	access:public	signature:(EngineDevice& engine_device, VkExtent2D window_extent)
+SwapChain	include/swap_chain.hpp	/^			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent, std::shared_ptr<SwapChain> previous);$/;"	p	class:engine::SwapChain	access:public	signature:(EngineDevice& engine_device, VkExtent2D window_extent, std::shared_ptr<SwapChain> previous)
+SwapChain	include/swap_chain.hpp	/^			SwapChain(const SwapChain&) = delete;$/;"	p	class:engine::SwapChain	access:public	signature:(const SwapChain&)
+SwapChain	include/swap_chain.hpp	/^	class SwapChain {$/;"	c	namespace:engine
+SwapChain	src/swap_chain.cpp	/^	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent) : device_{ device }, windowExtent_{ extent } {$/;"	f	class:engine::SwapChain	signature:(EngineDevice& device, VkExtent2D extent)
+SwapChain	src/swap_chain.cpp	/^	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent, std::shared_ptr<SwapChain> previous) : device_{ device }, windowExtent_{ extent },$/;"	f	class:engine::SwapChain	signature:(EngineDevice& device, VkExtent2D extent, std::shared_ptr<SwapChain> previous)
+SwapChainSupportDetails	include/engine_device.hpp	/^	struct SwapChainSupportDetails {$/;"	s	namespace:engine
+TransformComponent	include/scene_object.hpp	/^	struct TransformComponent {$/;"	s	namespace:engine
+UNUSED	include/utils.hpp	/^#define UNUSED(/;"	d
+UTILS_HPP	include/utils.hpp	/^#define UTILS_HPP$/;"	d
+Vertex	include/model.hpp	/^			struct Vertex {$/;"	s	class:engine::Model	access:public
+WIDTH	include/app.hpp	/^			static constexpr int WIDTH = 1280;$/;"	m	class:engine::App	access:public
+WINDOW_H	include/window.hpp	/^#define WINDOW_H$/;"	d
+Window	include/window.hpp	/^			Window(const Window &) = delete;$/;"	p	class:engine::Window	access:public	signature:(const Window &)
+Window	include/window.hpp	/^			Window(int w, int h, std::string title);$/;"	p	class:engine::Window	access:public	signature:(int w, int h, std::string title)
+Window	include/window.hpp	/^	class Window {$/;"	c	namespace:engine
+Window	src/window.cpp	/^	Window::Window(int w, int h, std::string title) : width_(w), height_(h), title_(title) {$/;"	f	class:engine::Window	signature:(int w, int h, std::string title)
+__has_include	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
+__has_include	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
+acquireNextImage	include/swap_chain.hpp	/^			VkResult acquireNextImage(uint32_t* image_idx);$/;"	p	class:engine::SwapChain	access:public	signature:(uint32_t* image_idx)
+acquireNextImage	src/swap_chain.cpp	/^	VkResult SwapChain::acquireNextImage(uint32_t *image_idx) {$/;"	f	class:engine::SwapChain	signature:(uint32_t *image_idx)
+aspectRatio	include/renderer.hpp	/^			float aspectRatio() const { return swapChain_->extentAspectRatio(); }$/;"	f	class:engine::Renderer	access:public	signature:() const
+beginFrame	include/renderer.hpp	/^			VkCommandBuffer beginFrame();$/;"	p	class:engine::Renderer	access:public	signature:()
+beginFrame	src/renderer.cpp	/^	VkCommandBuffer Renderer::beginFrame() {$/;"	f	class:engine::Renderer	signature:()
+beginSingleTimeCommands	include/engine_device.hpp	/^			VkCommandBuffer beginSingleTimeCommands();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+beginSingleTimeCommands	src/engine_device.cpp	/^	VkCommandBuffer EngineDevice::beginSingleTimeCommands() {$/;"	f	class:engine::EngineDevice	signature:()
+beginSwapChainRenderPass	include/renderer.hpp	/^			void beginSwapChainRenderPass(VkCommandBuffer cmd_buf);$/;"	p	class:engine::Renderer	access:public	signature:(VkCommandBuffer cmd_buf)
+beginSwapChainRenderPass	src/renderer.cpp	/^	void Renderer::beginSwapChainRenderPass(VkCommandBuffer cmd_buf) {$/;"	f	class:engine::Renderer	signature:(VkCommandBuffer cmd_buf)
+bind	include/model.hpp	/^			void bind(VkCommandBuffer command_buf);$/;"	p	class:engine::Model	access:public	signature:(VkCommandBuffer command_buf)
+bind	include/pipeline.hpp	/^			void bind(VkCommandBuffer command_buffer);$/;"	p	class:engine::Pipeline	access:public	signature:(VkCommandBuffer command_buffer)
+bind	src/model.cpp	/^	void Model::bind(VkCommandBuffer command_buf) {$/;"	f	class:engine::Model	signature:(VkCommandBuffer command_buf)
+bind	src/pipeline.cpp	/^	void Pipeline::bind(VkCommandBuffer command_buffer) {$/;"	f	class:engine::Pipeline	signature:(VkCommandBuffer command_buffer)
+capabilites	include/engine_device.hpp	/^		VkSurfaceCapabilitiesKHR capabilites;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+checkDeviceExtensionSupport	include/engine_device.hpp	/^			bool checkDeviceExtensionSupport(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+checkDeviceExtensionSupport	src/engine_device.cpp	/^	bool EngineDevice::checkDeviceExtensionSupport(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+checkValidationLayerSupport	include/engine_device.hpp	/^			bool checkValidationLayerSupport();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+checkValidationLayerSupport	src/engine_device.cpp	/^	bool EngineDevice::checkValidationLayerSupport() {$/;"	f	class:engine::EngineDevice	signature:()
+chooseSwapExtent	include/swap_chain.hpp	/^			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);$/;"	p	class:engine::SwapChain	access:private	signature:(const VkSurfaceCapabilitiesKHR& capabilities)
+chooseSwapExtent	src/swap_chain.cpp	/^	VkExtent2D SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) {$/;"	f	class:engine::SwapChain	signature:(const VkSurfaceCapabilitiesKHR& capabilities)
+chooseSwapPresentMode	include/swap_chain.hpp	/^			VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& capabilities);$/;"	p	class:engine::SwapChain	access:private	signature:(const std::vector<VkPresentModeKHR>& capabilities)
+chooseSwapPresentMode	src/swap_chain.cpp	/^	VkPresentModeKHR SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& available_present_modes) {$/;"	f	class:engine::SwapChain	signature:(const std::vector<VkPresentModeKHR>& available_present_modes)
+chooseSwapSurfaceFormat	include/swap_chain.hpp	/^			VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& available_formats);$/;"	p	class:engine::SwapChain	access:private	signature:(const std::vector<VkSurfaceFormatKHR>& available_formats)
+chooseSwapSurfaceFormat	src/swap_chain.cpp	/^	VkSurfaceFormatKHR SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& available_formats) {$/;"	f	class:engine::SwapChain	signature:(const std::vector<VkSurfaceFormatKHR>& available_formats)
+cmdBuffers_	include/renderer.hpp	/^			std::vector<VkCommandBuffer> cmdBuffers_;$/;"	m	class:engine::Renderer	access:private
+color	include/model.hpp	/^				glm::vec3 color;$/;"	m	struct:engine::Model::Vertex	access:public
+color	src/render_system.cpp	/^		alignas(16) glm::vec3 color;$/;"	m	struct:engine::PushConstantData	file:	access:public
+colorBlendAttachment	include/pipeline.hpp	/^		VkPipelineColorBlendAttachmentState colorBlendAttachment;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+colorBlendInfo	include/pipeline.hpp	/^		VkPipelineColorBlendStateCreateInfo colorBlendInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+commandPool	include/engine_device.hpp	/^			VkCommandPool commandPool() { return commandPool_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+commandPool_	include/engine_device.hpp	/^			VkCommandPool commandPool_;$/;"	m	class:engine::EngineDevice	access:private
+compareSwapFormats	include/swap_chain.hpp	/^			bool compareSwapFormats(const SwapChain& other) const {$/;"	f	class:engine::SwapChain	access:public	signature:(const SwapChain& other) const
+const	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
+copyBuffer	include/engine_device.hpp	/^			void copyBuffer(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size)
+copyBuffer	src/engine_device.cpp	/^	void EngineDevice::copyBuffer(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size) {$/;"	f	class:engine::EngineDevice	signature:(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size)
+copyBufferToImage	include/engine_device.hpp	/^			void copyBufferToImage(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count)
+copyBufferToImage	src/engine_device.cpp	/^	void EngineDevice::copyBufferToImage(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count) {$/;"	f	class:engine::EngineDevice	signature:(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count)
+createBuffer	include/engine_device.hpp	/^			void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buf, VkDeviceMemory& buf_memory);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buf, VkDeviceMemory& buf_memory)
+createBuffer	src/engine_device.cpp	/^	void EngineDevice::createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &buf, VkDeviceMemory &buf_memory) {$/;"	f	class:engine::EngineDevice	signature:(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &buf, VkDeviceMemory &buf_memory)
+createCmdBuffers	include/renderer.hpp	/^			void createCmdBuffers();$/;"	p	class:engine::Renderer	access:private	signature:()
+createCmdBuffers	src/renderer.cpp	/^	void Renderer::createCmdBuffers() {$/;"	f	class:engine::Renderer	signature:()
+createCommandPool	include/engine_device.hpp	/^			void createCommandPool();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+createCommandPool	src/engine_device.cpp	/^	void EngineDevice::createCommandPool() {$/;"	f	class:engine::EngineDevice	signature:()
+createCube	src/app.cpp	/^	std::unique_ptr<Model> createCube(EngineDevice& device, glm::vec3 offset) {$/;"	f	namespace:engine	signature:(EngineDevice& device, glm::vec3 offset)
+createDepthResources	include/swap_chain.hpp	/^			void createDepthResources();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createDepthResources	src/swap_chain.cpp	/^	void SwapChain::createDepthResources() {$/;"	f	class:engine::SwapChain	signature:()
+createFrameBuffers	include/swap_chain.hpp	/^			void createFrameBuffers();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createFrameBuffers	src/swap_chain.cpp	/^	void SwapChain::createFrameBuffers() {$/;"	f	class:engine::SwapChain	signature:()
+createGraphicsPipeline	include/pipeline.hpp	/^			void createGraphicsPipeline(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+createGraphicsPipeline	src/pipeline.cpp	/^	void Pipeline::createGraphicsPipeline(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) {$/;"	f	class:engine::Pipeline	signature:(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+createImageViews	include/swap_chain.hpp	/^			void createImageViews();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createImageViews	src/swap_chain.cpp	/^	void SwapChain::createImageViews() {$/;"	f	class:engine::SwapChain	signature:()
+createImageWithInfo	include/engine_device.hpp	/^			void createImageWithInfo(const VkImageCreateInfo& image_info, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& image_memory);$/;"	p	class:engine::EngineDevice	access:public	signature:(const VkImageCreateInfo& image_info, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& image_memory)
+createImageWithInfo	src/engine_device.cpp	/^	void EngineDevice::createImageWithInfo(const VkImageCreateInfo &image_info, VkMemoryPropertyFlags properties, VkImage &image, VkDeviceMemory &image_memory) {$/;"	f	class:engine::EngineDevice	signature:(const VkImageCreateInfo &image_info, VkMemoryPropertyFlags properties, VkImage &image, VkDeviceMemory &image_memory)
+createInstance	include/engine_device.hpp	/^			void createInstance();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+createInstance	src/engine_device.cpp	/^	void EngineDevice::createInstance() {$/;"	f	class:engine::EngineDevice	signature:()
+createLogicalDevice	include/engine_device.hpp	/^			void createLogicalDevice();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+createLogicalDevice	src/engine_device.cpp	/^	void EngineDevice::createLogicalDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+createObject	include/scene_object.hpp	/^			static SceneObject createObject() {$/;"	f	class:engine::SceneObject	access:public	signature:()
+createPipeline	include/render_system.hpp	/^			void createPipeline(VkRenderPass render_pass);$/;"	p	class:engine::RenderSystem	access:private	signature:(VkRenderPass render_pass)
+createPipeline	src/render_system.cpp	/^	void RenderSystem::createPipeline(VkRenderPass render_pass) {$/;"	f	class:engine::RenderSystem	signature:(VkRenderPass render_pass)
+createPipelineLayout	include/render_system.hpp	/^			void createPipelineLayout();$/;"	p	class:engine::RenderSystem	access:private	signature:()
+createPipelineLayout	src/render_system.cpp	/^	void RenderSystem::createPipelineLayout() {$/;"	f	class:engine::RenderSystem	signature:()
+createRenderPass	include/swap_chain.hpp	/^			void createRenderPass();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createRenderPass	src/swap_chain.cpp	/^	void SwapChain::createRenderPass() {$/;"	f	class:engine::SwapChain	signature:()
+createShaderModule	include/pipeline.hpp	/^			void createShaderModule(const std::vector<char>& code, VkShaderModule* shader_module);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::vector<char>& code, VkShaderModule* shader_module)
+createShaderModule	src/pipeline.cpp	/^	void Pipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shader_module) {$/;"	f	class:engine::Pipeline	signature:(const std::vector<char>& code, VkShaderModule* shader_module)
+createSurface	include/engine_device.hpp	/^			void createSurface();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+createSurface	src/engine_device.cpp	/^	void EngineDevice::createSurface() {$/;"	f	class:engine::EngineDevice	signature:()
+createSwapChain	include/swap_chain.hpp	/^			void createSwapChain();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createSwapChain	src/swap_chain.cpp	/^	void SwapChain::createSwapChain() {$/;"	f	class:engine::SwapChain	signature:()
+createSyncObjects	include/swap_chain.hpp	/^			void createSyncObjects();$/;"	p	class:engine::SwapChain	access:private	signature:()
+createSyncObjects	src/swap_chain.cpp	/^	void SwapChain::createSyncObjects() {$/;"	f	class:engine::SwapChain	signature:()
+createVertexBuffers	include/model.hpp	/^			void createVertexBuffers(const std::vector<Vertex>& vertices);$/;"	p	class:engine::Model	access:private	signature:(const std::vector<Vertex>& vertices)
+createVertexBuffers	src/model.cpp	/^	void Model::createVertexBuffers(const std::vector<Vertex>& vertices) {$/;"	f	class:engine::Model	signature:(const std::vector<Vertex>& vertices)
+createWindowSurface	include/window.hpp	/^			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);$/;"	p	class:engine::Window	access:public	signature:(VkInstance instance, VkSurfaceKHR* surface)
+createWindowSurface	src/window.cpp	/^	void Window::createWindowSurface(VkInstance instance, VkSurfaceKHR* surface) {$/;"	f	class:engine::Window	signature:(VkInstance instance, VkSurfaceKHR* surface)
+create_debug_utils_messenger_ext	src/engine_device.cpp	/^	static VkResult create_debug_utils_messenger_ext($/;"	f	namespace:engine	signature:( VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* create_info, const VkAllocationCallbacks* allocator, VkDebugUtilsMessengerEXT* debug_messenger)
+curFrameIdx_	include/renderer.hpp	/^			int curFrameIdx_;$/;"	m	class:engine::Renderer	access:private
+curImageIdx_	include/renderer.hpp	/^			uint32_t curImageIdx_;$/;"	m	class:engine::Renderer	access:private
+currentCmdbuffer	include/renderer.hpp	/^			VkCommandBuffer currentCmdbuffer() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+currentFrame_	include/swap_chain.hpp	/^			size_t currentFrame_ = 0;$/;"	m	class:engine::SwapChain	access:private
+debugMessenger_	include/engine_device.hpp	/^			VkDebugUtilsMessengerEXT debugMessenger_;$/;"	m	class:engine::EngineDevice	access:private
+debug_callback	src/engine_device.cpp	/^	static VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback($/;"	f	namespace:engine	signature:( VkDebugUtilsMessageSeverityFlagBitsEXT message_severity, VkDebugUtilsMessageTypeFlagsEXT message_type, const VkDebugUtilsMessengerCallbackDataEXT* callback_data, void* user_data)
+defaultPipelineConfigInfo	include/pipeline.hpp	/^			static PipelineConfigInfo defaultPipelineConfigInfo();$/;"	p	class:engine::Pipeline	access:public	signature:()
+defaultPipelineConfigInfo	src/pipeline.cpp	/^	PipelineConfigInfo Pipeline::defaultPipelineConfigInfo() {$/;"	f	class:engine::Pipeline	signature:()
+depthImageMemories_	include/swap_chain.hpp	/^			std::vector<VkDeviceMemory> depthImageMemories_;$/;"	m	class:engine::SwapChain	access:private
+depthImageViews_	include/swap_chain.hpp	/^			std::vector<VkImageView> depthImageViews_;$/;"	m	class:engine::SwapChain	access:private
+depthImages_	include/swap_chain.hpp	/^			std::vector<VkImage> depthImages_;$/;"	m	class:engine::SwapChain	access:private
+depthStencilInfo	include/pipeline.hpp	/^		VkPipelineDepthStencilStateCreateInfo depthStencilInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+destroy_debug_utils_messenger_ext	src/engine_device.cpp	/^	static void destroy_debug_utils_messenger_ext($/;"	f	namespace:engine	signature:( VkInstance instance, VkDebugUtilsMessengerEXT debug_messenger, const VkAllocationCallbacks* allocator)
+device	include/engine_device.hpp	/^			VkDevice device() { return device_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+deviceExtensions_	include/engine_device.hpp	/^			const std::vector<const char*> deviceExtensions_ = { VK_KHR_SWAPCHAIN_EXTENSION_NAME, VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME };$/;"	m	class:engine::EngineDevice	access:private
+device_	include/engine_device.hpp	/^			VkDevice device_;$/;"	m	class:engine::EngineDevice	access:private
+device_	include/model.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Model	access:private
+device_	include/pipeline.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Pipeline	access:private
+device_	include/render_system.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::RenderSystem	access:private
+device_	include/renderer.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Renderer	access:private
+device_	include/swap_chain.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::SwapChain	access:private
+draw	include/model.hpp	/^			void draw(VkCommandBuffer command_buf);$/;"	p	class:engine::Model	access:public	signature:(VkCommandBuffer command_buf)
+draw	src/model.cpp	/^	void Model::draw(VkCommandBuffer command_buf) {$/;"	f	class:engine::Model	signature:(VkCommandBuffer command_buf)
+dynamamicStateInfo	include/pipeline.hpp	/^		VkPipelineDynamicStateCreateInfo dynamamicStateInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+dynamicStateEnables	include/pipeline.hpp	/^		std::vector<VkDynamicState> dynamicStateEnables;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+enabledValidationLayers	include/engine_device.hpp	/^			const bool enabledValidationLayers = false;$/;"	m	class:engine::EngineDevice	access:public
+endFrame	include/renderer.hpp	/^			void endFrame();$/;"	p	class:engine::Renderer	access:public	signature:()
+endFrame	src/renderer.cpp	/^	void Renderer::endFrame() {$/;"	f	class:engine::Renderer	signature:()
+endSingleTimeCommands	include/engine_device.hpp	/^			void endSingleTimeCommands(VkCommandBuffer command_buf);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkCommandBuffer command_buf)
+endSingleTimeCommands	src/engine_device.cpp	/^	void EngineDevice::endSingleTimeCommands(VkCommandBuffer command_buf) {$/;"	f	class:engine::EngineDevice	signature:(VkCommandBuffer command_buf)
+endSwapChainRenderPass	include/renderer.hpp	/^			void endSwapChainRenderPass(VkCommandBuffer cmd_buf);$/;"	p	class:engine::Renderer	access:public	signature:(VkCommandBuffer cmd_buf)
+endSwapChainRenderPass	src/renderer.cpp	/^	void Renderer::endSwapChainRenderPass(VkCommandBuffer cmd_buf) {$/;"	f	class:engine::Renderer	signature:(VkCommandBuffer cmd_buf)
+engine	include/app.hpp	/^namespace engine {$/;"	n
+engine	include/camera.hpp	/^namespace engine {$/;"	n
+engine	include/engine_device.hpp	/^namespace engine {$/;"	n
+engine	include/model.hpp	/^namespace engine {$/;"	n
+engine	include/pipeline.hpp	/^namespace engine {$/;"	n
+engine	include/render_system.hpp	/^namespace engine {$/;"	n
+engine	include/renderer.hpp	/^namespace engine {$/;"	n
+engine	include/scene_object.hpp	/^namespace engine {$/;"	n
+engine	include/swap_chain.hpp	/^namespace engine {$/;"	n
+engine	include/window.hpp	/^namespace engine {$/;"	n
+engine	src/app.cpp	/^namespace engine {$/;"	n	file:
+engine	src/camera.cpp	/^namespace engine {$/;"	n	file:
+engine	src/engine_device.cpp	/^namespace engine {$/;"	n	file:
+engine	src/model.cpp	/^namespace engine {$/;"	n	file:
+engine	src/pipeline.cpp	/^namespace engine {$/;"	n	file:
+engine	src/render_system.cpp	/^namespace engine {$/;"	n	file:
+engine	src/renderer.cpp	/^namespace engine {$/;"	n	file:
+engine	src/swap_chain.cpp	/^namespace engine {$/;"	n	file:
+engine	src/window.cpp	/^namespace engine {$/;"	n	file:
+engine::App	include/app.hpp	/^	class App {$/;"	c	namespace:engine
+engine::App::App	include/app.hpp	/^			App();$/;"	p	class:engine::App	access:public	signature:()
+engine::App::App	include/app.hpp	/^			App(const App&) = delete;$/;"	p	class:engine::App	access:public	signature:(const App&)
+engine::App::App	src/app.cpp	/^	App::App() {$/;"	f	class:engine::App	signature:()
+engine::App::HEIGHT	include/app.hpp	/^			static constexpr int HEIGHT = 720;$/;"	m	class:engine::App	access:public
+engine::App::WIDTH	include/app.hpp	/^			static constexpr int WIDTH = 1280;$/;"	m	class:engine::App	access:public
+engine::App::loadSceneObjects	include/app.hpp	/^			void loadSceneObjects();$/;"	p	class:engine::App	access:private	signature:()
+engine::App::loadSceneObjects	src/app.cpp	/^	void App::loadSceneObjects() {$/;"	f	class:engine::App	signature:()
+engine::App::operator =	include/app.hpp	/^			App& operator=(const App&) = delete;$/;"	p	class:engine::App	access:public	signature:(const App&)
+engine::App::run	include/app.hpp	/^			void run();$/;"	p	class:engine::App	access:public	signature:()
+engine::App::run	src/app.cpp	/^	void App::run() {$/;"	f	class:engine::App	signature:()
+engine::App::sceneObjects_	include/app.hpp	/^			std::vector<SceneObject> sceneObjects_;$/;"	m	class:engine::App	access:private
+engine::App::~App	include/app.hpp	/^			~App();$/;"	p	class:engine::App	access:public	signature:()
+engine::App::~App	src/app.cpp	/^	App::~App() {$/;"	f	class:engine::App	signature:()
+engine::Camera	include/camera.hpp	/^	class Camera {$/;"	c	namespace:engine
+engine::Camera::orhographicProjection	include/camera.hpp	/^			void orhographicProjection(float left, float right, float top, float bottom, float near, float far);$/;"	p	class:engine::Camera	access:public	signature:(float left, float right, float top, float bottom, float near, float far)
+engine::Camera::orhographicProjection	src/camera.cpp	/^	void Camera::orhographicProjection(float left, float right, float top, float bottom, float near, float far) {$/;"	f	class:engine::Camera	signature:(float left, float right, float top, float bottom, float near, float far)
+engine::Camera::perspectiveProjection	include/camera.hpp	/^			void perspectiveProjection(float fovy, float aspect, float near, float far);$/;"	p	class:engine::Camera	access:public	signature:(float fovy, float aspect, float near, float far)
+engine::Camera::perspectiveProjection	src/camera.cpp	/^	void Camera::perspectiveProjection(float fovy, float aspect, float near, float far) {$/;"	f	class:engine::Camera	signature:(float fovy, float aspect, float near, float far)
+engine::Camera::projection	include/camera.hpp	/^			const glm::mat4& projection() const { return projectionMatrix_; }$/;"	f	class:engine::Camera	access:public	signature:() const
+engine::Camera::view	include/camera.hpp	/^			const glm::mat4& view() const { return viewMatrix_; }$/;"	f	class:engine::Camera	access:public	signature:() const
+engine::Camera::viewDirection	include/camera.hpp	/^			void viewDirection(glm::vec3 position, glm::vec3 direction, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f });$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 direction, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f })
+engine::Camera::viewDirection	src/camera.cpp	/^	void Camera::viewDirection(glm::vec3 position, glm::vec3 direction, glm::vec3 up) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 direction, glm::vec3 up)
+engine::Camera::viewTarget	include/camera.hpp	/^			void viewTarget(glm::vec3 position, glm::vec3 target, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f });$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 target, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f })
+engine::Camera::viewTarget	src/camera.cpp	/^	void Camera::viewTarget(glm::vec3 position, glm::vec3 target, glm::vec3 up) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 target, glm::vec3 up)
+engine::Camera::viewYXZ	include/camera.hpp	/^			void viewYXZ(glm::vec3 position, glm::vec3 rotation);$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 rotation)
+engine::Camera::viewYXZ	src/camera.cpp	/^	void Camera::viewYXZ(glm::vec3 position, glm::vec3 rotation) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 rotation)
+engine::EngineDevice	include/engine_device.hpp	/^	class EngineDevice {$/;"	c	namespace:engine
+engine::EngineDevice::EngineDevice	include/engine_device.hpp	/^			EngineDevice(EngineDevice&&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(EngineDevice&&)
+engine::EngineDevice::EngineDevice	include/engine_device.hpp	/^			EngineDevice(Window& window);$/;"	p	class:engine::EngineDevice	access:public	signature:(Window& window)
+engine::EngineDevice::EngineDevice	include/engine_device.hpp	/^			EngineDevice(const EngineDevice&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(const EngineDevice&)
+engine::EngineDevice::EngineDevice	src/engine_device.cpp	/^	EngineDevice::EngineDevice(Window& window): window_{window}  {$/;"	f	class:engine::EngineDevice	signature:(Window& window)
+engine::EngineDevice::beginSingleTimeCommands	include/engine_device.hpp	/^			VkCommandBuffer beginSingleTimeCommands();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::beginSingleTimeCommands	src/engine_device.cpp	/^	VkCommandBuffer EngineDevice::beginSingleTimeCommands() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::checkDeviceExtensionSupport	include/engine_device.hpp	/^			bool checkDeviceExtensionSupport(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+engine::EngineDevice::checkDeviceExtensionSupport	src/engine_device.cpp	/^	bool EngineDevice::checkDeviceExtensionSupport(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+engine::EngineDevice::checkValidationLayerSupport	include/engine_device.hpp	/^			bool checkValidationLayerSupport();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::checkValidationLayerSupport	src/engine_device.cpp	/^	bool EngineDevice::checkValidationLayerSupport() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::commandPool	include/engine_device.hpp	/^			VkCommandPool commandPool() { return commandPool_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::commandPool_	include/engine_device.hpp	/^			VkCommandPool commandPool_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::copyBuffer	include/engine_device.hpp	/^			void copyBuffer(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size)
+engine::EngineDevice::copyBuffer	src/engine_device.cpp	/^	void EngineDevice::copyBuffer(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size) {$/;"	f	class:engine::EngineDevice	signature:(VkBuffer src_buf, VkBuffer dst_buf, VkDeviceSize size)
+engine::EngineDevice::copyBufferToImage	include/engine_device.hpp	/^			void copyBufferToImage(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count)
+engine::EngineDevice::copyBufferToImage	src/engine_device.cpp	/^	void EngineDevice::copyBufferToImage(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count) {$/;"	f	class:engine::EngineDevice	signature:(VkBuffer buf, VkImage image, uint32_t width, uint32_t height, uint32_t layer_count)
+engine::EngineDevice::createBuffer	include/engine_device.hpp	/^			void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buf, VkDeviceMemory& buf_memory);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buf, VkDeviceMemory& buf_memory)
+engine::EngineDevice::createBuffer	src/engine_device.cpp	/^	void EngineDevice::createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &buf, VkDeviceMemory &buf_memory) {$/;"	f	class:engine::EngineDevice	signature:(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &buf, VkDeviceMemory &buf_memory)
+engine::EngineDevice::createCommandPool	include/engine_device.hpp	/^			void createCommandPool();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::createCommandPool	src/engine_device.cpp	/^	void EngineDevice::createCommandPool() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::createImageWithInfo	include/engine_device.hpp	/^			void createImageWithInfo(const VkImageCreateInfo& image_info, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& image_memory);$/;"	p	class:engine::EngineDevice	access:public	signature:(const VkImageCreateInfo& image_info, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& image_memory)
+engine::EngineDevice::createImageWithInfo	src/engine_device.cpp	/^	void EngineDevice::createImageWithInfo(const VkImageCreateInfo &image_info, VkMemoryPropertyFlags properties, VkImage &image, VkDeviceMemory &image_memory) {$/;"	f	class:engine::EngineDevice	signature:(const VkImageCreateInfo &image_info, VkMemoryPropertyFlags properties, VkImage &image, VkDeviceMemory &image_memory)
+engine::EngineDevice::createInstance	include/engine_device.hpp	/^			void createInstance();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::createInstance	src/engine_device.cpp	/^	void EngineDevice::createInstance() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::createLogicalDevice	include/engine_device.hpp	/^			void createLogicalDevice();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::createLogicalDevice	src/engine_device.cpp	/^	void EngineDevice::createLogicalDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::createSurface	include/engine_device.hpp	/^			void createSurface();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::createSurface	src/engine_device.cpp	/^	void EngineDevice::createSurface() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::debugMessenger_	include/engine_device.hpp	/^			VkDebugUtilsMessengerEXT debugMessenger_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::device	include/engine_device.hpp	/^			VkDevice device() { return device_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::deviceExtensions_	include/engine_device.hpp	/^			const std::vector<const char*> deviceExtensions_ = { VK_KHR_SWAPCHAIN_EXTENSION_NAME, VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME };$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::device_	include/engine_device.hpp	/^			VkDevice device_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::enabledValidationLayers	include/engine_device.hpp	/^			const bool enabledValidationLayers = false;$/;"	m	class:engine::EngineDevice	access:public
+engine::EngineDevice::endSingleTimeCommands	include/engine_device.hpp	/^			void endSingleTimeCommands(VkCommandBuffer command_buf);$/;"	p	class:engine::EngineDevice	access:public	signature:(VkCommandBuffer command_buf)
+engine::EngineDevice::endSingleTimeCommands	src/engine_device.cpp	/^	void EngineDevice::endSingleTimeCommands(VkCommandBuffer command_buf) {$/;"	f	class:engine::EngineDevice	signature:(VkCommandBuffer command_buf)
+engine::EngineDevice::findMemoryType	include/engine_device.hpp	/^			uint32_t findMemoryType(uint32_t type_filter, VkMemoryPropertyFlags properties);$/;"	p	class:engine::EngineDevice	access:public	signature:(uint32_t type_filter, VkMemoryPropertyFlags properties)
+engine::EngineDevice::findMemoryType	src/engine_device.cpp	/^	uint32_t EngineDevice::findMemoryType(uint32_t type_filter, VkMemoryPropertyFlags properties) {$/;"	f	class:engine::EngineDevice	signature:(uint32_t type_filter, VkMemoryPropertyFlags properties)
+engine::EngineDevice::findPhysicalQueueFamilies	include/engine_device.hpp	/^			QueueFamilyIndices findPhysicalQueueFamilies();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::findPhysicalQueueFamilies	src/engine_device.cpp	/^	QueueFamilyIndices EngineDevice::findPhysicalQueueFamilies() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::findQueueFamilies	include/engine_device.hpp	/^			QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+engine::EngineDevice::findQueueFamilies	src/engine_device.cpp	/^	QueueFamilyIndices EngineDevice::findQueueFamilies(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+engine::EngineDevice::findSupportedFormat	include/engine_device.hpp	/^			VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);$/;"	p	class:engine::EngineDevice	access:public	signature:(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+engine::EngineDevice::findSupportedFormat	src/engine_device.cpp	/^	VkFormat EngineDevice::findSupportedFormat(const std::vector<VkFormat> &candidates, VkImageTiling tiling, VkFormatFeatureFlags features) {$/;"	f	class:engine::EngineDevice	signature:(const std::vector<VkFormat> &candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+engine::EngineDevice::getRequiredExtensions	include/engine_device.hpp	/^			std::vector<const char*> getRequiredExtensions();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::getRequiredExtensions	src/engine_device.cpp	/^	std::vector<const char*> EngineDevice::getRequiredExtensions() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::graphicsQueue	include/engine_device.hpp	/^			VkQueue graphicsQueue() { return graphicsQueue_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::graphicsQueue_	include/engine_device.hpp	/^			VkQueue graphicsQueue_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::hasGLFWRequiredInstanceExtensions	include/engine_device.hpp	/^			void hasGLFWRequiredInstanceExtensions();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::hasGLFWRequiredInstanceExtensions	src/engine_device.cpp	/^	void EngineDevice::hasGLFWRequiredInstanceExtensions() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::instance_	include/engine_device.hpp	/^			VkInstance instance_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::isDeviceSuitable	include/engine_device.hpp	/^			bool isDeviceSuitable(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+engine::EngineDevice::isDeviceSuitable	src/engine_device.cpp	/^	bool EngineDevice::isDeviceSuitable(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+engine::EngineDevice::operator =	include/engine_device.hpp	/^			EngineDevice& operator=(EngineDevice&&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(EngineDevice&&)
+engine::EngineDevice::operator =	include/engine_device.hpp	/^			EngineDevice& operator=(const EngineDevice&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(const EngineDevice&)
+engine::EngineDevice::physicalDevice_	include/engine_device.hpp	/^			VkPhysicalDevice physicalDevice_ = VK_NULL_HANDLE;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::pickPhysicalDevice	include/engine_device.hpp	/^			void pickPhysicalDevice();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::pickPhysicalDevice	src/engine_device.cpp	/^	void EngineDevice::pickPhysicalDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::populateDebugMessengerCreateInfo	include/engine_device.hpp	/^			void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& create_info);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkDebugUtilsMessengerCreateInfoEXT& create_info)
+engine::EngineDevice::populateDebugMessengerCreateInfo	src/engine_device.cpp	/^	void EngineDevice::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& create_info) {$/;"	f	class:engine::EngineDevice	signature:(VkDebugUtilsMessengerCreateInfoEXT& create_info)
+engine::EngineDevice::presentQueue	include/engine_device.hpp	/^			VkQueue presentQueue() { return presentQueue_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::presentQueue_	include/engine_device.hpp	/^			VkQueue presentQueue_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::properties	include/engine_device.hpp	/^			VkPhysicalDeviceProperties properties;$/;"	m	class:engine::EngineDevice	access:public
+engine::EngineDevice::querySwapChainSupport	include/engine_device.hpp	/^			SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice physicalDevice);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice physicalDevice)
+engine::EngineDevice::querySwapChainSupport	src/engine_device.cpp	/^	SwapChainSupportDetails EngineDevice::querySwapChainSupport(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+engine::EngineDevice::setupDebugMessenger	include/engine_device.hpp	/^			void setupDebugMessenger();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+engine::EngineDevice::setupDebugMessenger	src/engine_device.cpp	/^	void EngineDevice::setupDebugMessenger() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::surface	include/engine_device.hpp	/^			VkSurfaceKHR surface() { return surface_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::surface_	include/engine_device.hpp	/^			VkSurfaceKHR surface_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::swapChainSupport	include/engine_device.hpp	/^			SwapChainSupportDetails swapChainSupport();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::swapChainSupport	src/engine_device.cpp	/^	SwapChainSupportDetails EngineDevice::swapChainSupport() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::EngineDevice::validationLayers_	include/engine_device.hpp	/^			const std::vector<const char*> validationLayers_ = { "VK_LAYER_KHRONOS_validation" };$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::window_	include/engine_device.hpp	/^			Window& window_;$/;"	m	class:engine::EngineDevice	access:private
+engine::EngineDevice::~EngineDevice	include/engine_device.hpp	/^			~EngineDevice();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+engine::EngineDevice::~EngineDevice	src/engine_device.cpp	/^	EngineDevice::~EngineDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+engine::Model	include/model.hpp	/^	class Model {$/;"	c	namespace:engine
+engine::Model::Model	include/model.hpp	/^			Model(EngineDevice& device, const std::vector<Vertex>& vertices);$/;"	p	class:engine::Model	access:public	signature:(EngineDevice& device, const std::vector<Vertex>& vertices)
+engine::Model::Model	include/model.hpp	/^			Model(const Model&) = delete;$/;"	p	class:engine::Model	access:public	signature:(const Model&)
+engine::Model::Model	src/model.cpp	/^	Model::Model(EngineDevice& device, const std::vector<Vertex>& vertices) : device_{device} {$/;"	f	class:engine::Model	signature:(EngineDevice& device, const std::vector<Vertex>& vertices)
+engine::Model::Vertex	include/model.hpp	/^			struct Vertex {$/;"	s	class:engine::Model	access:public
+engine::Model::Vertex::color	include/model.hpp	/^				glm::vec3 color;$/;"	m	struct:engine::Model::Vertex	access:public
+engine::Model::Vertex::getAttributeDescriptions	include/model.hpp	/^				static std::vector<VkVertexInputAttributeDescription> getAttributeDescriptions();$/;"	p	struct:engine::Model::Vertex	access:public	signature:()
+engine::Model::Vertex::getAttributeDescriptions	src/model.cpp	/^	std::vector<VkVertexInputAttributeDescription> Model::Vertex::getAttributeDescriptions() {$/;"	f	class:engine::Model::Vertex	signature:()
+engine::Model::Vertex::getBindingDescriptions	include/model.hpp	/^				static std::vector<VkVertexInputBindingDescription> getBindingDescriptions();$/;"	p	struct:engine::Model::Vertex	access:public	signature:()
+engine::Model::Vertex::getBindingDescriptions	src/model.cpp	/^	std::vector<VkVertexInputBindingDescription> Model::Vertex::getBindingDescriptions() {$/;"	f	class:engine::Model::Vertex	signature:()
+engine::Model::Vertex::position	include/model.hpp	/^				glm::vec3 position;$/;"	m	struct:engine::Model::Vertex	access:public
+engine::Model::bind	include/model.hpp	/^			void bind(VkCommandBuffer command_buf);$/;"	p	class:engine::Model	access:public	signature:(VkCommandBuffer command_buf)
+engine::Model::bind	src/model.cpp	/^	void Model::bind(VkCommandBuffer command_buf) {$/;"	f	class:engine::Model	signature:(VkCommandBuffer command_buf)
+engine::Model::createVertexBuffers	include/model.hpp	/^			void createVertexBuffers(const std::vector<Vertex>& vertices);$/;"	p	class:engine::Model	access:private	signature:(const std::vector<Vertex>& vertices)
+engine::Model::createVertexBuffers	src/model.cpp	/^	void Model::createVertexBuffers(const std::vector<Vertex>& vertices) {$/;"	f	class:engine::Model	signature:(const std::vector<Vertex>& vertices)
+engine::Model::device_	include/model.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Model	access:private
+engine::Model::draw	include/model.hpp	/^			void draw(VkCommandBuffer command_buf);$/;"	p	class:engine::Model	access:public	signature:(VkCommandBuffer command_buf)
+engine::Model::draw	src/model.cpp	/^	void Model::draw(VkCommandBuffer command_buf) {$/;"	f	class:engine::Model	signature:(VkCommandBuffer command_buf)
+engine::Model::operator =	include/model.hpp	/^			Model& operator=(const Model&) = delete;$/;"	p	class:engine::Model	access:public	signature:(const Model&)
+engine::Model::vertexBufferMemory_	include/model.hpp	/^			VkDeviceMemory vertexBufferMemory_;$/;"	m	class:engine::Model	access:private
+engine::Model::vertexBuffer_	include/model.hpp	/^			VkBuffer vertexBuffer_;$/;"	m	class:engine::Model	access:private
+engine::Model::vertexCount_	include/model.hpp	/^			uint32_t vertexCount_;$/;"	m	class:engine::Model	access:private
+engine::Model::~Model	include/model.hpp	/^			~Model();$/;"	p	class:engine::Model	access:public	signature:()
+engine::Model::~Model	src/model.cpp	/^	Model::~Model() {$/;"	f	class:engine::Model	signature:()
+engine::Pipeline	include/pipeline.hpp	/^	class Pipeline {$/;"	c	namespace:engine
+engine::Pipeline::Pipeline	include/pipeline.hpp	/^			Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info);$/;"	p	class:engine::Pipeline	access:public	signature:(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+engine::Pipeline::Pipeline	include/pipeline.hpp	/^			Pipeline(const Pipeline&) = delete;$/;"	p	class:engine::Pipeline	access:public	signature:(const Pipeline&)
+engine::Pipeline::Pipeline	src/pipeline.cpp	/^	Pipeline::Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) : device_(device) {$/;"	f	class:engine::Pipeline	signature:(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+engine::Pipeline::bind	include/pipeline.hpp	/^			void bind(VkCommandBuffer command_buffer);$/;"	p	class:engine::Pipeline	access:public	signature:(VkCommandBuffer command_buffer)
+engine::Pipeline::bind	src/pipeline.cpp	/^	void Pipeline::bind(VkCommandBuffer command_buffer) {$/;"	f	class:engine::Pipeline	signature:(VkCommandBuffer command_buffer)
+engine::Pipeline::createGraphicsPipeline	include/pipeline.hpp	/^			void createGraphicsPipeline(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+engine::Pipeline::createGraphicsPipeline	src/pipeline.cpp	/^	void Pipeline::createGraphicsPipeline(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) {$/;"	f	class:engine::Pipeline	signature:(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info)
+engine::Pipeline::createShaderModule	include/pipeline.hpp	/^			void createShaderModule(const std::vector<char>& code, VkShaderModule* shader_module);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::vector<char>& code, VkShaderModule* shader_module)
+engine::Pipeline::createShaderModule	src/pipeline.cpp	/^	void Pipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shader_module) {$/;"	f	class:engine::Pipeline	signature:(const std::vector<char>& code, VkShaderModule* shader_module)
+engine::Pipeline::defaultPipelineConfigInfo	include/pipeline.hpp	/^			static PipelineConfigInfo defaultPipelineConfigInfo();$/;"	p	class:engine::Pipeline	access:public	signature:()
+engine::Pipeline::defaultPipelineConfigInfo	src/pipeline.cpp	/^	PipelineConfigInfo Pipeline::defaultPipelineConfigInfo() {$/;"	f	class:engine::Pipeline	signature:()
+engine::Pipeline::device_	include/pipeline.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Pipeline	access:private
+engine::Pipeline::fragShaderModule_	include/pipeline.hpp	/^			VkShaderModule fragShaderModule_;$/;"	m	class:engine::Pipeline	access:private
+engine::Pipeline::graphicsPipeline_	include/pipeline.hpp	/^			VkPipeline graphicsPipeline_;$/;"	m	class:engine::Pipeline	access:private
+engine::Pipeline::operator =	include/pipeline.hpp	/^			Pipeline& operator=(const Pipeline&) = delete;$/;"	p	class:engine::Pipeline	access:public	signature:(const Pipeline&)
+engine::Pipeline::readFile	include/pipeline.hpp	/^			static std::vector<char> readFile(const std::string& filepath);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::string& filepath)
+engine::Pipeline::readFile	src/pipeline.cpp	/^	std::vector<char> Pipeline::readFile(const std::string& filepath) {$/;"	f	class:engine::Pipeline	signature:(const std::string& filepath)
+engine::Pipeline::vertShaderModule_	include/pipeline.hpp	/^			VkShaderModule vertShaderModule_;$/;"	m	class:engine::Pipeline	access:private
+engine::Pipeline::~Pipeline	include/pipeline.hpp	/^			~Pipeline();$/;"	p	class:engine::Pipeline	access:public	signature:()
+engine::Pipeline::~Pipeline	src/pipeline.cpp	/^	Pipeline::~Pipeline() {$/;"	f	class:engine::Pipeline	signature:()
+engine::PipelineConfigInfo	include/pipeline.hpp	/^	struct PipelineConfigInfo {$/;"	s	namespace:engine
+engine::PipelineConfigInfo::colorBlendAttachment	include/pipeline.hpp	/^		VkPipelineColorBlendAttachmentState colorBlendAttachment;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::colorBlendInfo	include/pipeline.hpp	/^		VkPipelineColorBlendStateCreateInfo colorBlendInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::depthStencilInfo	include/pipeline.hpp	/^		VkPipelineDepthStencilStateCreateInfo depthStencilInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::dynamamicStateInfo	include/pipeline.hpp	/^		VkPipelineDynamicStateCreateInfo dynamamicStateInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::dynamicStateEnables	include/pipeline.hpp	/^		std::vector<VkDynamicState> dynamicStateEnables;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::inputAssemblyInfo	include/pipeline.hpp	/^		VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::multisampleInfo	include/pipeline.hpp	/^		VkPipelineMultisampleStateCreateInfo multisampleInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::pipelineLayout	include/pipeline.hpp	/^		VkPipelineLayout pipelineLayout = nullptr;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::rasterizationInfo	include/pipeline.hpp	/^		VkPipelineRasterizationStateCreateInfo rasterizationInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::renderPass	include/pipeline.hpp	/^		VkRenderPass renderPass = nullptr;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::subpass	include/pipeline.hpp	/^		uint32_t subpass = 0;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PipelineConfigInfo::viewportInfo	include/pipeline.hpp	/^		VkPipelineViewportStateCreateInfo viewportInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+engine::PushConstantData	src/render_system.cpp	/^	struct PushConstantData {$/;"	s	namespace:engine	file:
+engine::PushConstantData::color	src/render_system.cpp	/^		alignas(16) glm::vec3 color;$/;"	m	struct:engine::PushConstantData	file:	access:public
+engine::QueueFamilyIndices	include/engine_device.hpp	/^	struct QueueFamilyIndices {$/;"	s	namespace:engine
+engine::QueueFamilyIndices::graphicsFamily	include/engine_device.hpp	/^		uint32_t graphicsFamily;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+engine::QueueFamilyIndices::graphicsFamilyHasValue	include/engine_device.hpp	/^		bool graphicsFamilyHasValue = false;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+engine::QueueFamilyIndices::isComplete	include/engine_device.hpp	/^		bool isComplete() {$/;"	f	struct:engine::QueueFamilyIndices	access:public	signature:()
+engine::QueueFamilyIndices::presentFamily	include/engine_device.hpp	/^		uint32_t presentFamily;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+engine::QueueFamilyIndices::presentFamilyHasValue	include/engine_device.hpp	/^		bool presentFamilyHasValue = false;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+engine::RenderSystem	include/render_system.hpp	/^	class RenderSystem {$/;"	c	namespace:engine
+engine::RenderSystem::RenderSystem	include/render_system.hpp	/^			RenderSystem(EngineDevice& device, VkRenderPass render_pass);$/;"	p	class:engine::RenderSystem	access:public	signature:(EngineDevice& device, VkRenderPass render_pass)
+engine::RenderSystem::RenderSystem	include/render_system.hpp	/^			RenderSystem(const RenderSystem&) = delete;$/;"	p	class:engine::RenderSystem	access:public	signature:(const RenderSystem&)
+engine::RenderSystem::RenderSystem	src/render_system.cpp	/^	RenderSystem::RenderSystem(EngineDevice& device, VkRenderPass render_pass) : device_{ device }  {$/;"	f	class:engine::RenderSystem	signature:(EngineDevice& device, VkRenderPass render_pass)
+engine::RenderSystem::createPipeline	include/render_system.hpp	/^			void createPipeline(VkRenderPass render_pass);$/;"	p	class:engine::RenderSystem	access:private	signature:(VkRenderPass render_pass)
+engine::RenderSystem::createPipeline	src/render_system.cpp	/^	void RenderSystem::createPipeline(VkRenderPass render_pass) {$/;"	f	class:engine::RenderSystem	signature:(VkRenderPass render_pass)
+engine::RenderSystem::createPipelineLayout	include/render_system.hpp	/^			void createPipelineLayout();$/;"	p	class:engine::RenderSystem	access:private	signature:()
+engine::RenderSystem::createPipelineLayout	src/render_system.cpp	/^	void RenderSystem::createPipelineLayout() {$/;"	f	class:engine::RenderSystem	signature:()
+engine::RenderSystem::device_	include/render_system.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::RenderSystem	access:private
+engine::RenderSystem::operator =	include/render_system.hpp	/^			RenderSystem &operator=(const RenderSystem&) = delete;$/;"	p	class:engine::RenderSystem	access:public	signature:(const RenderSystem&)
+engine::RenderSystem::pipelineLayout_	include/render_system.hpp	/^			VkPipelineLayout pipelineLayout_;$/;"	m	class:engine::RenderSystem	access:private
+engine::RenderSystem::pipeline_	include/render_system.hpp	/^			std::unique_ptr<Pipeline> pipeline_;$/;"	m	class:engine::RenderSystem	access:private
+engine::RenderSystem::renderSceneObjects	include/render_system.hpp	/^			void renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera);$/;"	p	class:engine::RenderSystem	access:public	signature:(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera)
+engine::RenderSystem::renderSceneObjects	src/render_system.cpp	/^	void RenderSystem::renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera) {$/;"	f	class:engine::RenderSystem	signature:(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera)
+engine::RenderSystem::~RenderSystem	include/render_system.hpp	/^			~RenderSystem();$/;"	p	class:engine::RenderSystem	access:public	signature:()
+engine::RenderSystem::~RenderSystem	src/render_system.cpp	/^	RenderSystem::~RenderSystem() {$/;"	f	class:engine::RenderSystem	signature:()
+engine::Renderer	include/renderer.hpp	/^	class Renderer {$/;"	c	namespace:engine
+engine::Renderer::Renderer	include/renderer.hpp	/^			Renderer(Window& window, EngineDevice& device);$/;"	p	class:engine::Renderer	access:public	signature:(Window& window, EngineDevice& device)
+engine::Renderer::Renderer	include/renderer.hpp	/^			Renderer(const Renderer&) = delete;$/;"	p	class:engine::Renderer	access:public	signature:(const Renderer&)
+engine::Renderer::Renderer	src/renderer.cpp	/^	Renderer::Renderer(Window& window, EngineDevice& device) : window_ { window }, device_ { device } {$/;"	f	class:engine::Renderer	signature:(Window& window, EngineDevice& device)
+engine::Renderer::aspectRatio	include/renderer.hpp	/^			float aspectRatio() const { return swapChain_->extentAspectRatio(); }$/;"	f	class:engine::Renderer	access:public	signature:() const
+engine::Renderer::beginFrame	include/renderer.hpp	/^			VkCommandBuffer beginFrame();$/;"	p	class:engine::Renderer	access:public	signature:()
+engine::Renderer::beginFrame	src/renderer.cpp	/^	VkCommandBuffer Renderer::beginFrame() {$/;"	f	class:engine::Renderer	signature:()
+engine::Renderer::beginSwapChainRenderPass	include/renderer.hpp	/^			void beginSwapChainRenderPass(VkCommandBuffer cmd_buf);$/;"	p	class:engine::Renderer	access:public	signature:(VkCommandBuffer cmd_buf)
+engine::Renderer::beginSwapChainRenderPass	src/renderer.cpp	/^	void Renderer::beginSwapChainRenderPass(VkCommandBuffer cmd_buf) {$/;"	f	class:engine::Renderer	signature:(VkCommandBuffer cmd_buf)
+engine::Renderer::cmdBuffers_	include/renderer.hpp	/^			std::vector<VkCommandBuffer> cmdBuffers_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::createCmdBuffers	include/renderer.hpp	/^			void createCmdBuffers();$/;"	p	class:engine::Renderer	access:private	signature:()
+engine::Renderer::createCmdBuffers	src/renderer.cpp	/^	void Renderer::createCmdBuffers() {$/;"	f	class:engine::Renderer	signature:()
+engine::Renderer::curFrameIdx_	include/renderer.hpp	/^			int curFrameIdx_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::curImageIdx_	include/renderer.hpp	/^			uint32_t curImageIdx_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::currentCmdbuffer	include/renderer.hpp	/^			VkCommandBuffer currentCmdbuffer() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+engine::Renderer::device_	include/renderer.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::endFrame	include/renderer.hpp	/^			void endFrame();$/;"	p	class:engine::Renderer	access:public	signature:()
+engine::Renderer::endFrame	src/renderer.cpp	/^	void Renderer::endFrame() {$/;"	f	class:engine::Renderer	signature:()
+engine::Renderer::endSwapChainRenderPass	include/renderer.hpp	/^			void endSwapChainRenderPass(VkCommandBuffer cmd_buf);$/;"	p	class:engine::Renderer	access:public	signature:(VkCommandBuffer cmd_buf)
+engine::Renderer::endSwapChainRenderPass	src/renderer.cpp	/^	void Renderer::endSwapChainRenderPass(VkCommandBuffer cmd_buf) {$/;"	f	class:engine::Renderer	signature:(VkCommandBuffer cmd_buf)
+engine::Renderer::frameIdx	include/renderer.hpp	/^			int frameIdx() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+engine::Renderer::freeCmdBuffers	include/renderer.hpp	/^			void freeCmdBuffers();$/;"	p	class:engine::Renderer	access:private	signature:()
+engine::Renderer::freeCmdBuffers	src/renderer.cpp	/^	void Renderer::freeCmdBuffers() {$/;"	f	class:engine::Renderer	signature:()
+engine::Renderer::isFrameInProgress	include/renderer.hpp	/^			bool isFrameInProgress() { return isFrameStarted_; }$/;"	f	class:engine::Renderer	access:public	signature:()
+engine::Renderer::isFrameStarted_	include/renderer.hpp	/^			bool isFrameStarted_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::operator =	include/renderer.hpp	/^			Renderer& operator=(const Renderer&) = delete;$/;"	p	class:engine::Renderer	access:public	signature:(const Renderer&)
+engine::Renderer::recreateSwapChain	include/renderer.hpp	/^			void recreateSwapChain();$/;"	p	class:engine::Renderer	access:private	signature:()
+engine::Renderer::recreateSwapChain	src/renderer.cpp	/^	void Renderer::recreateSwapChain() {$/;"	f	class:engine::Renderer	signature:()
+engine::Renderer::swapChainRenderPass	include/renderer.hpp	/^			VkRenderPass swapChainRenderPass() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+engine::Renderer::swapChain_	include/renderer.hpp	/^			std::unique_ptr<SwapChain> swapChain_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::window_	include/renderer.hpp	/^			Window& window_;$/;"	m	class:engine::Renderer	access:private
+engine::Renderer::~Renderer	include/renderer.hpp	/^			~Renderer();$/;"	p	class:engine::Renderer	access:public	signature:()
+engine::Renderer::~Renderer	src/renderer.cpp	/^	Renderer::~Renderer() {$/;"	f	class:engine::Renderer	signature:()
+engine::SceneObject	include/scene_object.hpp	/^	class SceneObject {$/;"	c	namespace:engine
+engine::SceneObject::SceneObject	include/scene_object.hpp	/^			SceneObject(SceneObject&&) = default;$/;"	p	class:engine::SceneObject	access:public	signature:(SceneObject&&)
+engine::SceneObject::SceneObject	include/scene_object.hpp	/^			SceneObject(id_t id) : id_(id) {}$/;"	f	class:engine::SceneObject	access:private	signature:(id_t id)
+engine::SceneObject::createObject	include/scene_object.hpp	/^			static SceneObject createObject() {$/;"	f	class:engine::SceneObject	access:public	signature:()
+engine::SceneObject::id	include/scene_object.hpp	/^			id_t id() const {$/;"	f	class:engine::SceneObject	access:public	signature:() const
+engine::SceneObject::id_	include/scene_object.hpp	/^			id_t id_;$/;"	m	class:engine::SceneObject	access:private
+engine::SceneObject::operator =	include/scene_object.hpp	/^			SceneObject &operator=(SceneObject&&) = default;$/;"	p	class:engine::SceneObject	access:public	signature:(SceneObject&&)
+engine::SceneObject::operator =	include/scene_object.hpp	/^			SceneObject &operator=(const SceneObject&) = delete;$/;"	p	class:engine::SceneObject	access:public	signature:(const SceneObject&)
+engine::SwapChain	include/swap_chain.hpp	/^	class SwapChain {$/;"	c	namespace:engine
+engine::SwapChain::MAX_FRAMES	include/swap_chain.hpp	/^			static constexpr int MAX_FRAMES = 2;$/;"	m	class:engine::SwapChain	access:public
+engine::SwapChain::SwapChain	include/swap_chain.hpp	/^			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent);$/;"	p	class:engine::SwapChain	access:public	signature:(EngineDevice& engine_device, VkExtent2D window_extent)
+engine::SwapChain::SwapChain	include/swap_chain.hpp	/^			SwapChain(EngineDevice& engine_device, VkExtent2D window_extent, std::shared_ptr<SwapChain> previous);$/;"	p	class:engine::SwapChain	access:public	signature:(EngineDevice& engine_device, VkExtent2D window_extent, std::shared_ptr<SwapChain> previous)
+engine::SwapChain::SwapChain	include/swap_chain.hpp	/^			SwapChain(const SwapChain&) = delete;$/;"	p	class:engine::SwapChain	access:public	signature:(const SwapChain&)
+engine::SwapChain::SwapChain	src/swap_chain.cpp	/^	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent) : device_{ device }, windowExtent_{ extent } {$/;"	f	class:engine::SwapChain	signature:(EngineDevice& device, VkExtent2D extent)
+engine::SwapChain::SwapChain	src/swap_chain.cpp	/^	SwapChain::SwapChain(EngineDevice& device, VkExtent2D extent, std::shared_ptr<SwapChain> previous) : device_{ device }, windowExtent_{ extent },$/;"	f	class:engine::SwapChain	signature:(EngineDevice& device, VkExtent2D extent, std::shared_ptr<SwapChain> previous)
+engine::SwapChain::acquireNextImage	include/swap_chain.hpp	/^			VkResult acquireNextImage(uint32_t* image_idx);$/;"	p	class:engine::SwapChain	access:public	signature:(uint32_t* image_idx)
+engine::SwapChain::acquireNextImage	src/swap_chain.cpp	/^	VkResult SwapChain::acquireNextImage(uint32_t *image_idx) {$/;"	f	class:engine::SwapChain	signature:(uint32_t *image_idx)
+engine::SwapChain::chooseSwapExtent	include/swap_chain.hpp	/^			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);$/;"	p	class:engine::SwapChain	access:private	signature:(const VkSurfaceCapabilitiesKHR& capabilities)
+engine::SwapChain::chooseSwapExtent	src/swap_chain.cpp	/^	VkExtent2D SwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) {$/;"	f	class:engine::SwapChain	signature:(const VkSurfaceCapabilitiesKHR& capabilities)
+engine::SwapChain::chooseSwapPresentMode	include/swap_chain.hpp	/^			VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& capabilities);$/;"	p	class:engine::SwapChain	access:private	signature:(const std::vector<VkPresentModeKHR>& capabilities)
+engine::SwapChain::chooseSwapPresentMode	src/swap_chain.cpp	/^	VkPresentModeKHR SwapChain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& available_present_modes) {$/;"	f	class:engine::SwapChain	signature:(const std::vector<VkPresentModeKHR>& available_present_modes)
+engine::SwapChain::chooseSwapSurfaceFormat	include/swap_chain.hpp	/^			VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& available_formats);$/;"	p	class:engine::SwapChain	access:private	signature:(const std::vector<VkSurfaceFormatKHR>& available_formats)
+engine::SwapChain::chooseSwapSurfaceFormat	src/swap_chain.cpp	/^	VkSurfaceFormatKHR SwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& available_formats) {$/;"	f	class:engine::SwapChain	signature:(const std::vector<VkSurfaceFormatKHR>& available_formats)
+engine::SwapChain::compareSwapFormats	include/swap_chain.hpp	/^			bool compareSwapFormats(const SwapChain& other) const {$/;"	f	class:engine::SwapChain	access:public	signature:(const SwapChain& other) const
+engine::SwapChain::createDepthResources	include/swap_chain.hpp	/^			void createDepthResources();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createDepthResources	src/swap_chain.cpp	/^	void SwapChain::createDepthResources() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::createFrameBuffers	include/swap_chain.hpp	/^			void createFrameBuffers();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createFrameBuffers	src/swap_chain.cpp	/^	void SwapChain::createFrameBuffers() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::createImageViews	include/swap_chain.hpp	/^			void createImageViews();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createImageViews	src/swap_chain.cpp	/^	void SwapChain::createImageViews() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::createRenderPass	include/swap_chain.hpp	/^			void createRenderPass();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createRenderPass	src/swap_chain.cpp	/^	void SwapChain::createRenderPass() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::createSwapChain	include/swap_chain.hpp	/^			void createSwapChain();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createSwapChain	src/swap_chain.cpp	/^	void SwapChain::createSwapChain() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::createSyncObjects	include/swap_chain.hpp	/^			void createSyncObjects();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::createSyncObjects	src/swap_chain.cpp	/^	void SwapChain::createSyncObjects() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::currentFrame_	include/swap_chain.hpp	/^			size_t currentFrame_ = 0;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::depthImageMemories_	include/swap_chain.hpp	/^			std::vector<VkDeviceMemory> depthImageMemories_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::depthImageViews_	include/swap_chain.hpp	/^			std::vector<VkImageView> depthImageViews_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::depthImages_	include/swap_chain.hpp	/^			std::vector<VkImage> depthImages_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::device_	include/swap_chain.hpp	/^			EngineDevice& device_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::extentAspectRatio	include/swap_chain.hpp	/^			float extentAspectRatio() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::findDepthFormat	include/swap_chain.hpp	/^			VkFormat findDepthFormat();$/;"	p	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::findDepthFormat	src/swap_chain.cpp	/^	VkFormat SwapChain::findDepthFormat() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::getFrameBuffer	include/swap_chain.hpp	/^			VkFramebuffer getFrameBuffer(int index) {$/;"	f	class:engine::SwapChain	access:public	signature:(int index)
+engine::SwapChain::getImageView	include/swap_chain.hpp	/^			VkImageView getImageView(int index) {$/;"	f	class:engine::SwapChain	access:public	signature:(int index)
+engine::SwapChain::getRenderPass	include/swap_chain.hpp	/^			VkRenderPass getRenderPass() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::getSwapChainExtent	include/swap_chain.hpp	/^			VkExtent2D getSwapChainExtent() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::getSwapChainImageFormat	include/swap_chain.hpp	/^			VkFormat getSwapChainImageFormat() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::height	include/swap_chain.hpp	/^			uint32_t height() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::imageAvailableSemaphores_	include/swap_chain.hpp	/^			std::vector<VkSemaphore> imageAvailableSemaphores_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::imageCount	include/swap_chain.hpp	/^			size_t imageCount() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::imagesInFlight_	include/swap_chain.hpp	/^			std::vector<VkFence> imagesInFlight_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::inFlightFences_	include/swap_chain.hpp	/^			std::vector<VkFence> inFlightFences_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::init	include/swap_chain.hpp	/^			void init();$/;"	p	class:engine::SwapChain	access:private	signature:()
+engine::SwapChain::init	src/swap_chain.cpp	/^	void SwapChain::init() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChain::oldSwapChain_	include/swap_chain.hpp	/^			std::shared_ptr<SwapChain> oldSwapChain_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::operator =	include/swap_chain.hpp	/^			SwapChain& operator=(const SwapChain&) = delete;$/;"	p	class:engine::SwapChain	access:public	signature:(const SwapChain&)
+engine::SwapChain::renderFinishedSemaphores_	include/swap_chain.hpp	/^			std::vector<VkSemaphore> renderFinishedSemaphores_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::renderPass_	include/swap_chain.hpp	/^			VkRenderPass renderPass_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::submitCommandBuffers	include/swap_chain.hpp	/^			VkResult submitCommandBuffers(const VkCommandBuffer* buffers, uint32_t* image_idx);$/;"	p	class:engine::SwapChain	access:public	signature:(const VkCommandBuffer* buffers, uint32_t* image_idx)
+engine::SwapChain::submitCommandBuffers	src/swap_chain.cpp	/^	VkResult SwapChain::submitCommandBuffers(const VkCommandBuffer *buffers, uint32_t *image_idx) {$/;"	f	class:engine::SwapChain	signature:(const VkCommandBuffer *buffers, uint32_t *image_idx)
+engine::SwapChain::swapChainDepthFormat_	include/swap_chain.hpp	/^			VkFormat swapChainDepthFormat_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChainExtent_	include/swap_chain.hpp	/^			VkExtent2D swapChainExtent_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChainFrameBuffers_	include/swap_chain.hpp	/^			std::vector<VkFramebuffer> swapChainFrameBuffers_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChainImageFormat_	include/swap_chain.hpp	/^			VkFormat swapChainImageFormat_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChainImageViews_	include/swap_chain.hpp	/^			std::vector<VkImageView> swapChainImageViews_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChainImages_	include/swap_chain.hpp	/^			std::vector<VkImage> swapChainImages_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::swapChain_	include/swap_chain.hpp	/^			VkSwapchainKHR swapChain_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::width	include/swap_chain.hpp	/^			uint32_t width() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::windowExtent_	include/swap_chain.hpp	/^			VkExtent2D windowExtent_;$/;"	m	class:engine::SwapChain	access:private
+engine::SwapChain::~SwapChain	include/swap_chain.hpp	/^			~SwapChain();$/;"	p	class:engine::SwapChain	access:public	signature:()
+engine::SwapChain::~SwapChain	src/swap_chain.cpp	/^	SwapChain::~SwapChain() {$/;"	f	class:engine::SwapChain	signature:()
+engine::SwapChainSupportDetails	include/engine_device.hpp	/^	struct SwapChainSupportDetails {$/;"	s	namespace:engine
+engine::SwapChainSupportDetails::capabilites	include/engine_device.hpp	/^		VkSurfaceCapabilitiesKHR capabilites;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+engine::SwapChainSupportDetails::formats	include/engine_device.hpp	/^		std::vector<VkSurfaceFormatKHR> formats;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+engine::SwapChainSupportDetails::presentModes	include/engine_device.hpp	/^		std::vector<VkPresentModeKHR> presentModes;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+engine::TransformComponent	include/scene_object.hpp	/^	struct TransformComponent {$/;"	s	namespace:engine
+engine::TransformComponent::mat4	include/scene_object.hpp	/^		glm::mat4 mat4() {$/;"	f	struct:engine::TransformComponent	access:public	signature:()
+engine::Window	include/window.hpp	/^	class Window {$/;"	c	namespace:engine
+engine::Window::Window	include/window.hpp	/^			Window(const Window &) = delete;$/;"	p	class:engine::Window	access:public	signature:(const Window &)
+engine::Window::Window	include/window.hpp	/^			Window(int w, int h, std::string title);$/;"	p	class:engine::Window	access:public	signature:(int w, int h, std::string title)
+engine::Window::Window	src/window.cpp	/^	Window::Window(int w, int h, std::string title) : width_(w), height_(h), title_(title) {$/;"	f	class:engine::Window	signature:(int w, int h, std::string title)
+engine::Window::createWindowSurface	include/window.hpp	/^			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);$/;"	p	class:engine::Window	access:public	signature:(VkInstance instance, VkSurfaceKHR* surface)
+engine::Window::createWindowSurface	src/window.cpp	/^	void Window::createWindowSurface(VkInstance instance, VkSurfaceKHR* surface) {$/;"	f	class:engine::Window	signature:(VkInstance instance, VkSurfaceKHR* surface)
+engine::Window::extent	include/window.hpp	/^			VkExtent2D extent() {$/;"	f	class:engine::Window	access:public	signature:()
+engine::Window::frameBufferResizedCallback	include/window.hpp	/^			static void frameBufferResizedCallback(GLFWwindow* window, int width, int height);$/;"	p	class:engine::Window	access:private	signature:(GLFWwindow* window, int width, int height)
+engine::Window::frameBufferResizedCallback	src/window.cpp	/^	void Window::frameBufferResizedCallback(GLFWwindow* window, int width, int height) {$/;"	f	class:engine::Window	signature:(GLFWwindow* window, int width, int height)
+engine::Window::frameBufferResized_	include/window.hpp	/^			bool frameBufferResized_ = false;$/;"	m	class:engine::Window	access:private
+engine::Window::frame_buffer_resized_	include/window.hpp	/^			static int frame_buffer_resized_;$/;"	m	class:engine::Window	access:private
+engine::Window::h_	include/window.hpp	/^			static int h_;$/;"	m	class:engine::Window	access:private
+engine::Window::height_	include/window.hpp	/^			int height_;$/;"	m	class:engine::Window	access:private
+engine::Window::initWindow	include/window.hpp	/^			void initWindow();$/;"	p	class:engine::Window	access:private	signature:()
+engine::Window::initWindow	src/window.cpp	/^	void Window::initWindow() {$/;"	f	class:engine::Window	signature:()
+engine::Window::operator =	include/window.hpp	/^			Window& operator=(const Window &) = delete;$/;"	p	class:engine::Window	access:public	signature:(const Window &)
+engine::Window::resetWindowResize	include/window.hpp	/^			void resetWindowResize() { frameBufferResized_ = false; }$/;"	f	class:engine::Window	access:public	signature:()
+engine::Window::shouldClose	include/window.hpp	/^			bool shouldClose();$/;"	p	class:engine::Window	access:public	signature:()
+engine::Window::shouldClose	src/window.cpp	/^	bool Window::shouldClose() {$/;"	f	class:engine::Window	signature:()
+engine::Window::title_	include/window.hpp	/^			std::string title_;$/;"	m	class:engine::Window	access:private
+engine::Window::w_	include/window.hpp	/^			static int w_;$/;"	m	class:engine::Window	access:private
+engine::Window::wasResized	include/window.hpp	/^			bool wasResized() { return frameBufferResized_; }$/;"	f	class:engine::Window	access:public	signature:()
+engine::Window::width_	include/window.hpp	/^			int width_;$/;"	m	class:engine::Window	access:private
+engine::Window::window_	include/window.hpp	/^			GLFWwindow* window_;$/;"	m	class:engine::Window	access:private
+engine::Window::~Window	include/window.hpp	/^			~Window();$/;"	p	class:engine::Window	access:public	signature:()
+engine::Window::~Window	src/window.cpp	/^	Window::~Window() {$/;"	f	class:engine::Window	signature:()
+engine::createCube	src/app.cpp	/^	std::unique_ptr<Model> createCube(EngineDevice& device, glm::vec3 offset) {$/;"	f	namespace:engine	signature:(EngineDevice& device, glm::vec3 offset)
+engine::create_debug_utils_messenger_ext	src/engine_device.cpp	/^	static VkResult create_debug_utils_messenger_ext($/;"	f	namespace:engine	signature:( VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* create_info, const VkAllocationCallbacks* allocator, VkDebugUtilsMessengerEXT* debug_messenger)
+engine::debug_callback	src/engine_device.cpp	/^	static VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback($/;"	f	namespace:engine	signature:( VkDebugUtilsMessageSeverityFlagBitsEXT message_severity, VkDebugUtilsMessageTypeFlagsEXT message_type, const VkDebugUtilsMessengerCallbackDataEXT* callback_data, void* user_data)
+engine::destroy_debug_utils_messenger_ext	src/engine_device.cpp	/^	static void destroy_debug_utils_messenger_ext($/;"	f	namespace:engine	signature:( VkInstance instance, VkDebugUtilsMessengerEXT debug_messenger, const VkAllocationCallbacks* allocator)
+extent	include/window.hpp	/^			VkExtent2D extent() {$/;"	f	class:engine::Window	access:public	signature:()
+extentAspectRatio	include/swap_chain.hpp	/^			float extentAspectRatio() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+findDepthFormat	include/swap_chain.hpp	/^			VkFormat findDepthFormat();$/;"	p	class:engine::SwapChain	access:public	signature:()
+findDepthFormat	src/swap_chain.cpp	/^	VkFormat SwapChain::findDepthFormat() {$/;"	f	class:engine::SwapChain	signature:()
+findMemoryType	include/engine_device.hpp	/^			uint32_t findMemoryType(uint32_t type_filter, VkMemoryPropertyFlags properties);$/;"	p	class:engine::EngineDevice	access:public	signature:(uint32_t type_filter, VkMemoryPropertyFlags properties)
+findMemoryType	src/engine_device.cpp	/^	uint32_t EngineDevice::findMemoryType(uint32_t type_filter, VkMemoryPropertyFlags properties) {$/;"	f	class:engine::EngineDevice	signature:(uint32_t type_filter, VkMemoryPropertyFlags properties)
+findPhysicalQueueFamilies	include/engine_device.hpp	/^			QueueFamilyIndices findPhysicalQueueFamilies();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+findPhysicalQueueFamilies	src/engine_device.cpp	/^	QueueFamilyIndices EngineDevice::findPhysicalQueueFamilies() {$/;"	f	class:engine::EngineDevice	signature:()
+findQueueFamilies	include/engine_device.hpp	/^			QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+findQueueFamilies	src/engine_device.cpp	/^	QueueFamilyIndices EngineDevice::findQueueFamilies(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+findSupportedFormat	include/engine_device.hpp	/^			VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);$/;"	p	class:engine::EngineDevice	access:public	signature:(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+findSupportedFormat	src/engine_device.cpp	/^	VkFormat EngineDevice::findSupportedFormat(const std::vector<VkFormat> &candidates, VkImageTiling tiling, VkFormatFeatureFlags features) {$/;"	f	class:engine::EngineDevice	signature:(const std::vector<VkFormat> &candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+formats	include/engine_device.hpp	/^		std::vector<VkSurfaceFormatKHR> formats;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+fragShaderModule_	include/pipeline.hpp	/^			VkShaderModule fragShaderModule_;$/;"	m	class:engine::Pipeline	access:private
+frameBufferResizedCallback	include/window.hpp	/^			static void frameBufferResizedCallback(GLFWwindow* window, int width, int height);$/;"	p	class:engine::Window	access:private	signature:(GLFWwindow* window, int width, int height)
+frameBufferResizedCallback	src/window.cpp	/^	void Window::frameBufferResizedCallback(GLFWwindow* window, int width, int height) {$/;"	f	class:engine::Window	signature:(GLFWwindow* window, int width, int height)
+frameBufferResized_	include/window.hpp	/^			bool frameBufferResized_ = false;$/;"	m	class:engine::Window	access:private
+frameIdx	include/renderer.hpp	/^			int frameIdx() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+frame_buffer_resized_	include/window.hpp	/^			static int frame_buffer_resized_;$/;"	m	class:engine::Window	access:private
+freeCmdBuffers	include/renderer.hpp	/^			void freeCmdBuffers();$/;"	p	class:engine::Renderer	access:private	signature:()
+freeCmdBuffers	src/renderer.cpp	/^	void Renderer::freeCmdBuffers() {$/;"	f	class:engine::Renderer	signature:()
+getAttributeDescriptions	include/model.hpp	/^				static std::vector<VkVertexInputAttributeDescription> getAttributeDescriptions();$/;"	p	struct:engine::Model::Vertex	access:public	signature:()
+getAttributeDescriptions	src/model.cpp	/^	std::vector<VkVertexInputAttributeDescription> Model::Vertex::getAttributeDescriptions() {$/;"	f	class:engine::Model::Vertex	signature:()
+getBindingDescriptions	include/model.hpp	/^				static std::vector<VkVertexInputBindingDescription> getBindingDescriptions();$/;"	p	struct:engine::Model::Vertex	access:public	signature:()
+getBindingDescriptions	src/model.cpp	/^	std::vector<VkVertexInputBindingDescription> Model::Vertex::getBindingDescriptions() {$/;"	f	class:engine::Model::Vertex	signature:()
+getFrameBuffer	include/swap_chain.hpp	/^			VkFramebuffer getFrameBuffer(int index) {$/;"	f	class:engine::SwapChain	access:public	signature:(int index)
+getImageView	include/swap_chain.hpp	/^			VkImageView getImageView(int index) {$/;"	f	class:engine::SwapChain	access:public	signature:(int index)
+getRenderPass	include/swap_chain.hpp	/^			VkRenderPass getRenderPass() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+getRequiredExtensions	include/engine_device.hpp	/^			std::vector<const char*> getRequiredExtensions();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+getRequiredExtensions	src/engine_device.cpp	/^	std::vector<const char*> EngineDevice::getRequiredExtensions() {$/;"	f	class:engine::EngineDevice	signature:()
+getSwapChainExtent	include/swap_chain.hpp	/^			VkExtent2D getSwapChainExtent() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+getSwapChainImageFormat	include/swap_chain.hpp	/^			VkFormat getSwapChainImageFormat() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+graphicsFamily	include/engine_device.hpp	/^		uint32_t graphicsFamily;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+graphicsFamilyHasValue	include/engine_device.hpp	/^		bool graphicsFamilyHasValue = false;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+graphicsPipeline_	include/pipeline.hpp	/^			VkPipeline graphicsPipeline_;$/;"	m	class:engine::Pipeline	access:private
+graphicsQueue	include/engine_device.hpp	/^			VkQueue graphicsQueue() { return graphicsQueue_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+graphicsQueue_	include/engine_device.hpp	/^			VkQueue graphicsQueue_;$/;"	m	class:engine::EngineDevice	access:private
+h_	include/window.hpp	/^			static int h_;$/;"	m	class:engine::Window	access:private
+hasGLFWRequiredInstanceExtensions	include/engine_device.hpp	/^			void hasGLFWRequiredInstanceExtensions();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+hasGLFWRequiredInstanceExtensions	src/engine_device.cpp	/^	void EngineDevice::hasGLFWRequiredInstanceExtensions() {$/;"	f	class:engine::EngineDevice	signature:()
+height	include/swap_chain.hpp	/^			uint32_t height() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+height_	include/window.hpp	/^			int height_;$/;"	m	class:engine::Window	access:private
+id	include/scene_object.hpp	/^			id_t id() const {$/;"	f	class:engine::SceneObject	access:public	signature:() const
+id_	include/scene_object.hpp	/^			id_t id_;$/;"	m	class:engine::SceneObject	access:private
+imageAvailableSemaphores_	include/swap_chain.hpp	/^			std::vector<VkSemaphore> imageAvailableSemaphores_;$/;"	m	class:engine::SwapChain	access:private
+imageCount	include/swap_chain.hpp	/^			size_t imageCount() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+imagesInFlight_	include/swap_chain.hpp	/^			std::vector<VkFence> imagesInFlight_;$/;"	m	class:engine::SwapChain	access:private
+inFlightFences_	include/swap_chain.hpp	/^			std::vector<VkFence> inFlightFences_;$/;"	m	class:engine::SwapChain	access:private
+info_arch	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_cray	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_cray	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_language_extensions_default	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v
+info_language_extensions_default	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v
+info_language_standard_default	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_standard_default =$/;"	v
+info_language_standard_default	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_standard_default = "INFO" ":" "standard_default["$/;"	v
+info_platform	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v
+info_version	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v
+info_version_internal	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
+info_version_internal	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
+info_version_internal	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v
+info_version_internal	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
+init	include/swap_chain.hpp	/^			void init();$/;"	p	class:engine::SwapChain	access:private	signature:()
+init	src/swap_chain.cpp	/^	void SwapChain::init() {$/;"	f	class:engine::SwapChain	signature:()
+initWindow	include/window.hpp	/^			void initWindow();$/;"	p	class:engine::Window	access:private	signature:()
+initWindow	src/window.cpp	/^	void Window::initWindow() {$/;"	f	class:engine::Window	signature:()
+inputAssemblyInfo	include/pipeline.hpp	/^		VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+instance_	include/engine_device.hpp	/^			VkInstance instance_;$/;"	m	class:engine::EngineDevice	access:private
+isComplete	include/engine_device.hpp	/^		bool isComplete() {$/;"	f	struct:engine::QueueFamilyIndices	access:public	signature:()
+isDeviceSuitable	include/engine_device.hpp	/^			bool isDeviceSuitable(VkPhysicalDevice device);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice device)
+isDeviceSuitable	src/engine_device.cpp	/^	bool EngineDevice::isDeviceSuitable(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+isFrameInProgress	include/renderer.hpp	/^			bool isFrameInProgress() { return isFrameStarted_; }$/;"	f	class:engine::Renderer	access:public	signature:()
+isFrameStarted_	include/renderer.hpp	/^			bool isFrameStarted_;$/;"	m	class:engine::Renderer	access:private
+loadSceneObjects	include/app.hpp	/^			void loadSceneObjects();$/;"	p	class:engine::App	access:private	signature:()
+loadSceneObjects	src/app.cpp	/^	void App::loadSceneObjects() {$/;"	f	class:engine::App	signature:()
+main	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	src/main.cpp	/^int main() {$/;"	f	signature:()
+mat4	include/scene_object.hpp	/^		glm::mat4 mat4() {$/;"	f	struct:engine::TransformComponent	access:public	signature:()
+multisampleInfo	include/pipeline.hpp	/^		VkPipelineMultisampleStateCreateInfo multisampleInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+oldSwapChain_	include/swap_chain.hpp	/^			std::shared_ptr<SwapChain> oldSwapChain_;$/;"	m	class:engine::SwapChain	access:private
+operator =	include/app.hpp	/^			App& operator=(const App&) = delete;$/;"	p	class:engine::App	access:public	signature:(const App&)
+operator =	include/engine_device.hpp	/^			EngineDevice& operator=(EngineDevice&&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(EngineDevice&&)
+operator =	include/engine_device.hpp	/^			EngineDevice& operator=(const EngineDevice&) = delete;$/;"	p	class:engine::EngineDevice	access:public	signature:(const EngineDevice&)
+operator =	include/model.hpp	/^			Model& operator=(const Model&) = delete;$/;"	p	class:engine::Model	access:public	signature:(const Model&)
+operator =	include/pipeline.hpp	/^			Pipeline& operator=(const Pipeline&) = delete;$/;"	p	class:engine::Pipeline	access:public	signature:(const Pipeline&)
+operator =	include/render_system.hpp	/^			RenderSystem &operator=(const RenderSystem&) = delete;$/;"	p	class:engine::RenderSystem	access:public	signature:(const RenderSystem&)
+operator =	include/renderer.hpp	/^			Renderer& operator=(const Renderer&) = delete;$/;"	p	class:engine::Renderer	access:public	signature:(const Renderer&)
+operator =	include/scene_object.hpp	/^			SceneObject &operator=(SceneObject&&) = default;$/;"	p	class:engine::SceneObject	access:public	signature:(SceneObject&&)
+operator =	include/scene_object.hpp	/^			SceneObject &operator=(const SceneObject&) = delete;$/;"	p	class:engine::SceneObject	access:public	signature:(const SceneObject&)
+operator =	include/swap_chain.hpp	/^			SwapChain& operator=(const SwapChain&) = delete;$/;"	p	class:engine::SwapChain	access:public	signature:(const SwapChain&)
+operator =	include/window.hpp	/^			Window& operator=(const Window &) = delete;$/;"	p	class:engine::Window	access:public	signature:(const Window &)
+orhographicProjection	include/camera.hpp	/^			void orhographicProjection(float left, float right, float top, float bottom, float near, float far);$/;"	p	class:engine::Camera	access:public	signature:(float left, float right, float top, float bottom, float near, float far)
+orhographicProjection	src/camera.cpp	/^	void Camera::orhographicProjection(float left, float right, float top, float bottom, float near, float far) {$/;"	f	class:engine::Camera	signature:(float left, float right, float top, float bottom, float near, float far)
+perspectiveProjection	include/camera.hpp	/^			void perspectiveProjection(float fovy, float aspect, float near, float far);$/;"	p	class:engine::Camera	access:public	signature:(float fovy, float aspect, float near, float far)
+perspectiveProjection	src/camera.cpp	/^	void Camera::perspectiveProjection(float fovy, float aspect, float near, float far) {$/;"	f	class:engine::Camera	signature:(float fovy, float aspect, float near, float far)
+physicalDevice_	include/engine_device.hpp	/^			VkPhysicalDevice physicalDevice_ = VK_NULL_HANDLE;$/;"	m	class:engine::EngineDevice	access:private
+pickPhysicalDevice	include/engine_device.hpp	/^			void pickPhysicalDevice();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+pickPhysicalDevice	src/engine_device.cpp	/^	void EngineDevice::pickPhysicalDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+pipelineLayout	include/pipeline.hpp	/^		VkPipelineLayout pipelineLayout = nullptr;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+pipelineLayout_	include/render_system.hpp	/^			VkPipelineLayout pipelineLayout_;$/;"	m	class:engine::RenderSystem	access:private
+pipeline_	include/render_system.hpp	/^			std::unique_ptr<Pipeline> pipeline_;$/;"	m	class:engine::RenderSystem	access:private
+populateDebugMessengerCreateInfo	include/engine_device.hpp	/^			void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& create_info);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkDebugUtilsMessengerCreateInfoEXT& create_info)
+populateDebugMessengerCreateInfo	src/engine_device.cpp	/^	void EngineDevice::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& create_info) {$/;"	f	class:engine::EngineDevice	signature:(VkDebugUtilsMessengerCreateInfoEXT& create_info)
+position	include/model.hpp	/^				glm::vec3 position;$/;"	m	struct:engine::Model::Vertex	access:public
+presentFamily	include/engine_device.hpp	/^		uint32_t presentFamily;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+presentFamilyHasValue	include/engine_device.hpp	/^		bool presentFamilyHasValue = false;$/;"	m	struct:engine::QueueFamilyIndices	access:public
+presentModes	include/engine_device.hpp	/^		std::vector<VkPresentModeKHR> presentModes;$/;"	m	struct:engine::SwapChainSupportDetails	access:public
+presentQueue	include/engine_device.hpp	/^			VkQueue presentQueue() { return presentQueue_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+presentQueue_	include/engine_device.hpp	/^			VkQueue presentQueue_;$/;"	m	class:engine::EngineDevice	access:private
+projection	include/camera.hpp	/^			const glm::mat4& projection() const { return projectionMatrix_; }$/;"	f	class:engine::Camera	access:public	signature:() const
+properties	include/engine_device.hpp	/^			VkPhysicalDeviceProperties properties;$/;"	m	class:engine::EngineDevice	access:public
+qnxnto	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+qnxnto	build/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+querySwapChainSupport	include/engine_device.hpp	/^			SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice physicalDevice);$/;"	p	class:engine::EngineDevice	access:private	signature:(VkPhysicalDevice physicalDevice)
+querySwapChainSupport	src/engine_device.cpp	/^	SwapChainSupportDetails EngineDevice::querySwapChainSupport(VkPhysicalDevice device) {$/;"	f	class:engine::EngineDevice	signature:(VkPhysicalDevice device)
+rasterizationInfo	include/pipeline.hpp	/^		VkPipelineRasterizationStateCreateInfo rasterizationInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+readFile	include/pipeline.hpp	/^			static std::vector<char> readFile(const std::string& filepath);$/;"	p	class:engine::Pipeline	access:private	signature:(const std::string& filepath)
+readFile	src/pipeline.cpp	/^	std::vector<char> Pipeline::readFile(const std::string& filepath) {$/;"	f	class:engine::Pipeline	signature:(const std::string& filepath)
+recreateSwapChain	include/renderer.hpp	/^			void recreateSwapChain();$/;"	p	class:engine::Renderer	access:private	signature:()
+recreateSwapChain	src/renderer.cpp	/^	void Renderer::recreateSwapChain() {$/;"	f	class:engine::Renderer	signature:()
+renderFinishedSemaphores_	include/swap_chain.hpp	/^			std::vector<VkSemaphore> renderFinishedSemaphores_;$/;"	m	class:engine::SwapChain	access:private
+renderPass	include/pipeline.hpp	/^		VkRenderPass renderPass = nullptr;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+renderPass_	include/swap_chain.hpp	/^			VkRenderPass renderPass_;$/;"	m	class:engine::SwapChain	access:private
+renderSceneObjects	include/render_system.hpp	/^			void renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera);$/;"	p	class:engine::RenderSystem	access:public	signature:(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera)
+renderSceneObjects	src/render_system.cpp	/^	void RenderSystem::renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera) {$/;"	f	class:engine::RenderSystem	signature:(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera)
+resetWindowResize	include/window.hpp	/^			void resetWindowResize() { frameBufferResized_ = false; }$/;"	f	class:engine::Window	access:public	signature:()
+run	include/app.hpp	/^			void run();$/;"	p	class:engine::App	access:public	signature:()
+run	src/app.cpp	/^	void App::run() {$/;"	f	class:engine::App	signature:()
+sceneObjects_	include/app.hpp	/^			std::vector<SceneObject> sceneObjects_;$/;"	m	class:engine::App	access:private
+setupDebugMessenger	include/engine_device.hpp	/^			void setupDebugMessenger();$/;"	p	class:engine::EngineDevice	access:private	signature:()
+setupDebugMessenger	src/engine_device.cpp	/^	void EngineDevice::setupDebugMessenger() {$/;"	f	class:engine::EngineDevice	signature:()
+shouldClose	include/window.hpp	/^			bool shouldClose();$/;"	p	class:engine::Window	access:public	signature:()
+shouldClose	src/window.cpp	/^	bool Window::shouldClose() {$/;"	f	class:engine::Window	signature:()
+submitCommandBuffers	include/swap_chain.hpp	/^			VkResult submitCommandBuffers(const VkCommandBuffer* buffers, uint32_t* image_idx);$/;"	p	class:engine::SwapChain	access:public	signature:(const VkCommandBuffer* buffers, uint32_t* image_idx)
+submitCommandBuffers	src/swap_chain.cpp	/^	VkResult SwapChain::submitCommandBuffers(const VkCommandBuffer *buffers, uint32_t *image_idx) {$/;"	f	class:engine::SwapChain	signature:(const VkCommandBuffer *buffers, uint32_t *image_idx)
+subpass	include/pipeline.hpp	/^		uint32_t subpass = 0;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+surface	include/engine_device.hpp	/^			VkSurfaceKHR surface() { return surface_; }$/;"	f	class:engine::EngineDevice	access:public	signature:()
+surface_	include/engine_device.hpp	/^			VkSurfaceKHR surface_;$/;"	m	class:engine::EngineDevice	access:private
+swapChainDepthFormat_	include/swap_chain.hpp	/^			VkFormat swapChainDepthFormat_;$/;"	m	class:engine::SwapChain	access:private
+swapChainExtent_	include/swap_chain.hpp	/^			VkExtent2D swapChainExtent_;$/;"	m	class:engine::SwapChain	access:private
+swapChainFrameBuffers_	include/swap_chain.hpp	/^			std::vector<VkFramebuffer> swapChainFrameBuffers_;$/;"	m	class:engine::SwapChain	access:private
+swapChainImageFormat_	include/swap_chain.hpp	/^			VkFormat swapChainImageFormat_;$/;"	m	class:engine::SwapChain	access:private
+swapChainImageViews_	include/swap_chain.hpp	/^			std::vector<VkImageView> swapChainImageViews_;$/;"	m	class:engine::SwapChain	access:private
+swapChainImages_	include/swap_chain.hpp	/^			std::vector<VkImage> swapChainImages_;$/;"	m	class:engine::SwapChain	access:private
+swapChainRenderPass	include/renderer.hpp	/^			VkRenderPass swapChainRenderPass() const {$/;"	f	class:engine::Renderer	access:public	signature:() const
+swapChainSupport	include/engine_device.hpp	/^			SwapChainSupportDetails swapChainSupport();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+swapChainSupport	src/engine_device.cpp	/^	SwapChainSupportDetails EngineDevice::swapChainSupport() {$/;"	f	class:engine::EngineDevice	signature:()
+swapChain_	include/renderer.hpp	/^			std::unique_ptr<SwapChain> swapChain_;$/;"	m	class:engine::Renderer	access:private
+swapChain_	include/swap_chain.hpp	/^			VkSwapchainKHR swapChain_;$/;"	m	class:engine::SwapChain	access:private
+title_	include/window.hpp	/^			std::string title_;$/;"	m	class:engine::Window	access:private
+validationLayers_	include/engine_device.hpp	/^			const std::vector<const char*> validationLayers_ = { "VK_LAYER_KHRONOS_validation" };$/;"	m	class:engine::EngineDevice	access:private
+vertShaderModule_	include/pipeline.hpp	/^			VkShaderModule vertShaderModule_;$/;"	m	class:engine::Pipeline	access:private
+vertexBufferMemory_	include/model.hpp	/^			VkDeviceMemory vertexBufferMemory_;$/;"	m	class:engine::Model	access:private
+vertexBuffer_	include/model.hpp	/^			VkBuffer vertexBuffer_;$/;"	m	class:engine::Model	access:private
+vertexCount_	include/model.hpp	/^			uint32_t vertexCount_;$/;"	m	class:engine::Model	access:private
+view	include/camera.hpp	/^			const glm::mat4& view() const { return viewMatrix_; }$/;"	f	class:engine::Camera	access:public	signature:() const
+viewDirection	include/camera.hpp	/^			void viewDirection(glm::vec3 position, glm::vec3 direction, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f });$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 direction, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f })
+viewDirection	src/camera.cpp	/^	void Camera::viewDirection(glm::vec3 position, glm::vec3 direction, glm::vec3 up) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 direction, glm::vec3 up)
+viewTarget	include/camera.hpp	/^			void viewTarget(glm::vec3 position, glm::vec3 target, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f });$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 target, glm::vec3 up = glm::vec3 { 0.0f, -1.0f, 0.0f })
+viewTarget	src/camera.cpp	/^	void Camera::viewTarget(glm::vec3 position, glm::vec3 target, glm::vec3 up) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 target, glm::vec3 up)
+viewYXZ	include/camera.hpp	/^			void viewYXZ(glm::vec3 position, glm::vec3 rotation);$/;"	p	class:engine::Camera	access:public	signature:(glm::vec3 position, glm::vec3 rotation)
+viewYXZ	src/camera.cpp	/^	void Camera::viewYXZ(glm::vec3 position, glm::vec3 rotation) {$/;"	f	class:engine::Camera	signature:(glm::vec3 position, glm::vec3 rotation)
+viewportInfo	include/pipeline.hpp	/^		VkPipelineViewportStateCreateInfo viewportInfo;$/;"	m	struct:engine::PipelineConfigInfo	access:public
+volatile	build/CMakeFiles/3.27.7/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+w_	include/window.hpp	/^			static int w_;$/;"	m	class:engine::Window	access:private
+wasResized	include/window.hpp	/^			bool wasResized() { return frameBufferResized_; }$/;"	f	class:engine::Window	access:public	signature:()
+width	include/swap_chain.hpp	/^			uint32_t width() {$/;"	f	class:engine::SwapChain	access:public	signature:()
+width_	include/window.hpp	/^			int width_;$/;"	m	class:engine::Window	access:private
+windowExtent_	include/swap_chain.hpp	/^			VkExtent2D windowExtent_;$/;"	m	class:engine::SwapChain	access:private
+window_	include/engine_device.hpp	/^			Window& window_;$/;"	m	class:engine::EngineDevice	access:private
+window_	include/renderer.hpp	/^			Window& window_;$/;"	m	class:engine::Renderer	access:private
+window_	include/window.hpp	/^			GLFWwindow* window_;$/;"	m	class:engine::Window	access:private
+~App	include/app.hpp	/^			~App();$/;"	p	class:engine::App	access:public	signature:()
+~App	src/app.cpp	/^	App::~App() {$/;"	f	class:engine::App	signature:()
+~EngineDevice	include/engine_device.hpp	/^			~EngineDevice();$/;"	p	class:engine::EngineDevice	access:public	signature:()
+~EngineDevice	src/engine_device.cpp	/^	EngineDevice::~EngineDevice() {$/;"	f	class:engine::EngineDevice	signature:()
+~Model	include/model.hpp	/^			~Model();$/;"	p	class:engine::Model	access:public	signature:()
+~Model	src/model.cpp	/^	Model::~Model() {$/;"	f	class:engine::Model	signature:()
+~Pipeline	include/pipeline.hpp	/^			~Pipeline();$/;"	p	class:engine::Pipeline	access:public	signature:()
+~Pipeline	src/pipeline.cpp	/^	Pipeline::~Pipeline() {$/;"	f	class:engine::Pipeline	signature:()
+~RenderSystem	include/render_system.hpp	/^			~RenderSystem();$/;"	p	class:engine::RenderSystem	access:public	signature:()
+~RenderSystem	src/render_system.cpp	/^	RenderSystem::~RenderSystem() {$/;"	f	class:engine::RenderSystem	signature:()
+~Renderer	include/renderer.hpp	/^			~Renderer();$/;"	p	class:engine::Renderer	access:public	signature:()
+~Renderer	src/renderer.cpp	/^	Renderer::~Renderer() {$/;"	f	class:engine::Renderer	signature:()
+~SwapChain	include/swap_chain.hpp	/^			~SwapChain();$/;"	p	class:engine::SwapChain	access:public	signature:()
+~SwapChain	src/swap_chain.cpp	/^	SwapChain::~SwapChain() {$/;"	f	class:engine::SwapChain	signature:()
+~Window	include/window.hpp	/^			~Window();$/;"	p	class:engine::Window	access:public	signature:()
+~Window	src/window.cpp	/^	Window::~Window() {$/;"	f	class:engine::Window	signature:()

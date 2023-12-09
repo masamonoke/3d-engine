@@ -6,6 +6,7 @@
 #include <glm/gtc/constants.hpp>
 
 #include "render_system.hpp"
+#include "camera.hpp"
 
 namespace engine {
 
@@ -18,11 +19,16 @@ namespace engine {
 
 	void App::run() {
 		RenderSystem render { device_, renderer_.swapChainRenderPass() };
+		Camera camera {};
+		camera.viewDirection(glm::vec3(0.0f), glm::vec3(0.5f, 0.0f, 1.0f));
+
 		while (!window_.shouldClose()) {
 			glfwPollEvents();
+			float aspect = renderer_.aspectRatio();
+			camera.perspectiveProjection(glm::radians(50.0f), aspect, 0.1f, 10.0f);
 			if (auto cmd_buf = renderer_.beginFrame()) {
 				renderer_.beginSwapChainRenderPass(cmd_buf);
-				render.renderSceneObjects(cmd_buf, sceneObjects_);
+				render.renderSceneObjects(cmd_buf, sceneObjects_, camera);
 				renderer_.endSwapChainRenderPass(cmd_buf);
 				renderer_.endFrame();
 			}
@@ -90,7 +96,7 @@ namespace engine {
 		std::shared_ptr<Model> model = createCube(device_, { 0.0f, 0.0f, 0.0f });
 		auto cube = SceneObject::createObject();
 		cube.model = model;
-		cube.transform.translation = { 0.0f, 0.0f, 0.5f };
+		cube.transform.translation = { 0.0f, 0.0f, 1.5f };
 		cube.transform.scale = { 0.5f, 0.5f, 0.5f };
 		sceneObjects_.push_back(std::move(cube));
 	}

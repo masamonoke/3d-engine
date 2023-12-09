@@ -19,8 +19,11 @@ namespace engine {
 	}
 
 
-	void RenderSystem::renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects) {
+	void RenderSystem::renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera) {
 		pipeline_->bind(cmd_buf);
+
+		auto projection_view = camera.projection() * camera.view();
+
 		for (auto& obj : scene_objects) {
 			obj.transform.rotation.y = glm::mod(obj.transform.rotation.y + 0.01f, glm::two_pi<float>());
 			obj.transform.rotation.x = glm::mod(obj.transform.rotation.x + 0.01f, glm::two_pi<float>());
@@ -28,7 +31,7 @@ namespace engine {
 
 			PushConstantData push {};
 			push.color = obj.color;
-			push.transform = obj.transform.mat4();
+			push.transform = projection_view * obj.transform.mat4();
 			vkCmdPushConstants(
 				cmd_buf,
 				pipelineLayout_,

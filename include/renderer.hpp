@@ -39,6 +39,8 @@ namespace engine {
 				return curFrameIdx_;
 			}
 
+			float aspectRatio() const { return swapChain_->extentAspectRatio(); }
+
 		private:
 			Window& window_;
 			EngineDevice& device_;

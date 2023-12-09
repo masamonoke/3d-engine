@@ -2,7 +2,7 @@ include(./.env.cmake OPTIONAL RESULT_VARIABLE LOCAL_ENV)
 
 cmake_minimum_required(VERSION 3.22)
 
-set(NAME 3d_model_viewer)
+set(NAME 3d_engine)
 project(${NAME})
 
 set(CMAKE_CXX_STANDARD 20)
@@ -32,6 +32,7 @@ add_executable(${PROJECT_NAME}
 	src/model.cpp
 	src/renderer.cpp
 	src/render_system.cpp
+	src/camera.cpp
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror -fsanitize=address)

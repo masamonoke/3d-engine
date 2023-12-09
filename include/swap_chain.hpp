@@ -20,6 +20,10 @@ namespace engine {
 			SwapChain(const SwapChain&) = delete;
 			SwapChain& operator=(const SwapChain&) = delete;
 
+			VkFormat findDepthFormat();
+			VkResult acquireNextImage(uint32_t* image_idx);
+			VkResult submitCommandBuffers(const VkCommandBuffer* buffers, uint32_t* image_idx);
+
 			VkFramebuffer getFrameBuffer(int index) {
 				return swapChainFrameBuffers_[index];
 			}
@@ -48,9 +52,7 @@ namespace engine {
 			float extentAspectRatio() {
 				return static_cast<float>(swapChainExtent_.width) / static_cast<float>(swapChainExtent_.height);
 			}
-			VkFormat findDepthFormat();
-			VkResult acquireNextImage(uint32_t* image_idx);
-			VkResult submitCommandBuffers(const VkCommandBuffer* buffers, uint32_t* image_idx);
+
 			bool compareSwapFormats(const SwapChain& other) const {
 				return other.swapChainDepthFormat_ == this->swapChainDepthFormat_ && other.swapChainImageFormat_ == this->swapChainImageFormat_;
 			}
