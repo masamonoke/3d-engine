@@ -15,10 +15,14 @@ namespace engine {
 
 			bool shouldClose();
 			void createWindowSurface(VkInstance instance, VkSurfaceKHR* surface);
+			GLFWwindow* glfwWindow() const { return window_; }
+
 			VkExtent2D extent() {
 				return { static_cast<uint32_t>(width_), static_cast<uint32_t>(height_) };
 			}
+
 			bool wasResized() { return frameBufferResized_; }
+
 			void resetWindowResize() { frameBufferResized_ = false; }
 
 		private:

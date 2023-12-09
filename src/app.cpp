@@ -2,11 +2,13 @@
 
 #include <stdexcept>
 #include <iostream>
+#include <chrono>
 
 #include <glm/gtc/constants.hpp>
 
 #include "render_system.hpp"
 #include "camera.hpp"
+#include "keyboard_move_controller.hpp"
 
 namespace engine {
 
@@ -20,10 +22,20 @@ namespace engine {
 	void App::run() {
 		RenderSystem render { device_, renderer_.swapChainRenderPass() };
 		Camera camera {};
-		camera.viewDirection(glm::vec3(0.0f), glm::vec3(0.5f, 0.0f, 1.0f));
+		auto current_time = std::chrono::high_resolution_clock::now();
+		auto viewer_obj = SceneObject::createObject();
+		KeyboardMoveController camera_controller {};
 
 		while (!window_.shouldClose()) {
 			glfwPollEvents();
+
+			auto new_time = std::chrono::high_resolution_clock::now();
+			float frame_time = std::chrono::duration<float, std::chrono::seconds::period>(new_time - current_time).count();
+			current_time = new_time;
+
+			camera_controller.moveInPlayeXZ(window_.glfwWindow(), frame_time, viewer_obj);
+			camera.viewYXZ(viewer_obj.transform.translation, viewer_obj.transform.rotation);
+
 			float aspect = renderer_.aspectRatio();
 			camera.perspectiveProjection(glm::radians(50.0f), aspect, 0.1f, 10.0f);
 			if (auto cmd_buf = renderer_.beginFrame()) {

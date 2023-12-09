@@ -33,6 +33,7 @@ add_executable(${PROJECT_NAME}
 	src/renderer.cpp
 	src/render_system.cpp
 	src/camera.cpp
+	src/keyboard_move_controller.cpp
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror -fsanitize=address)
