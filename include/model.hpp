@@ -20,7 +20,12 @@ namespace engine {
 				static std::vector<VkVertexInputAttributeDescription> getAttributeDescriptions();
 			};
 
-			Model(EngineDevice& device, const std::vector<Vertex>& vertices);
+			struct Builder {
+				std::vector<Vertex> vertices {};
+				std::vector<uint32_t> indices {};
+			};
+
+			Model(EngineDevice& device, const Builder& builder);
 			~Model();
 
 			Model(const Model&) = delete;
@@ -31,11 +36,19 @@ namespace engine {
 
 		private:
 			EngineDevice& device_;
+
 			VkBuffer vertexBuffer_;
 			VkDeviceMemory vertexBufferMemory_;
 			uint32_t vertexCount_;
 
+			bool hasIndexBuffer_ = false;
+			VkBuffer indexBuffer_;
+			VkDeviceMemory indexBufferMemory_;
+			uint32_t indexCount_;
+
 			void createVertexBuffers(const std::vector<Vertex>& vertices);
+			void createIndexBuffers(const std::vector<uint32_t>& indices);
+
 	};
 }
 
