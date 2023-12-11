@@ -3,3 +3,4 @@
 .env.cmake
 build
 assets/models/*
+tags
