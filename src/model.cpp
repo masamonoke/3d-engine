@@ -1,6 +1,26 @@
 #include "model.hpp"
+#include "utils.hpp"
+
+#define TINYOBJLEADER_IMPLEMENTATION
+#include <tiny_obj_loader.h>
+
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/gtx/hash.hpp>
 
 #include <cassert>
+#include <iostream>
+#include <unordered_map>
+
+namespace std {
+	template<>
+	struct hash<engine::Model::Vertex> {
+		size_t operator()(engine::Model::Vertex const & vertex) const {
+			size_t seed = 0;
+			engine::hash_combine(seed, vertex.position, vertex.color, vertex.normal, vertex.uv);
+			return seed;
+		}
+	};
+}
 
 namespace engine {
 
@@ -117,4 +137,66 @@ namespace engine {
 
 		return attribute_descriptions;
 	}
+
+	std::unique_ptr<Model> Model::createModelFromFile(EngineDevice& device, const std::string& filepath) {
+		Builder builder {};
+		builder.loadModel(filepath);
+		std::cout << "Vertex count: " << builder.vertices.size() << "\n";
+		return std::make_unique<Model>(device, builder);
+	}
+
+	void Model::Builder::loadModel(const std::string& filepath) {
+		tinyobj::attrib_t attr;
+		std::vector<tinyobj::shape_t> shapes;
+		std::vector<tinyobj::material_t> materials;
+		std::string warn;
+		std::string err;
+		if (!tinyobj::LoadObj(&attr, &shapes, &materials, &warn, &err, filepath.c_str())) {
+			throw std::runtime_error(warn + err);
+		}
+		this->vertices.clear();
+		this->indices.clear();
+		std::unordered_map<Vertex, uint32_t> unique_vertices {};
+		for (const auto& shape : shapes) {
+			for (const auto& index : shape.mesh.indices) {
+				Vertex vertex {};
+				if (index.vertex_index >= 0) {
+					vertex.position = {
+						attr.vertices[3 * index.vertex_index + 0],
+						attr.vertices[3 * index.vertex_index + 1],
+						attr.vertices[3 * index.vertex_index + 2]
+					};
+					size_t color_idx = 3 * index.vertex_index + 2;
+					if (color_idx < attr.colors.size()) {
+						vertex.color = {
+							attr.colors[color_idx - 2],
+							attr.colors[color_idx - 1],
+							attr.colors[color_idx - 0]
+						};
+					} else {
+						vertex.color = { 1.0f, 1.0f, 1.0f };
+					}
+				}
+				if (index.normal_index >= 0) {
+					vertex.normal = {
+						attr.normals[3 * index.normal_index + 0],
+						attr.normals[3 * index.normal_index + 1],
+						attr.normals[3 * index.normal_index + 2]
+					};
+				}
+				if (index.texcoord_index >= 0) {
+					vertex.uv = {
+						attr.texcoords[2 * index.texcoord_index + 0],
+						attr.texcoords[2 * index.texcoord_index + 1],
+					};
+				}
+				if (unique_vertices.count(vertex) == 0) {
+					unique_vertices[vertex] = static_cast<uint32_t>(vertices.size());
+					vertices.push_back(vertex);
+				}
+				indices.push_back(unique_vertices[vertex]);
+			}
+		}
+	}
+
 }

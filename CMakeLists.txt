@@ -36,11 +36,16 @@ add_executable(${PROJECT_NAME}
 	src/keyboard_move_controller.cpp
 )
 
+target_include_directories(${PROJECT_NAME} PUBLIC ${TINYOJB_PATH})
+add_library(tinyobjloader INTERFACE ${TINYOJB_PATH})
+target_compile_definitions(tinyobjloader INTERFACE TINYOBJLOADER_IMPLEMENTATION)
+
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror -fsanitize=address)
 target_link_options(${PROJECT_NAME} PRIVATE -fsanitize=address)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${Vulkan_INCLUDE_DIRS})
 target_link_directories(${PROJECT_NAME} PUBLIC ${Vulkan_LIBRARIES})
+
 
 find_package(glfw3 3.3 REQUIRED)
 message(STATUS "Found GLFW")
@@ -48,4 +53,4 @@ message(STATUS "Found GLFW")
 find_package(glm REQUIRED)
 message(STATUS "Found glm")
 
-target_link_libraries(${PROJECT_NAME} glfw vulkan glm::glm)
+target_link_libraries(${PROJECT_NAME} glfw vulkan glm::glm tinyobjloader)

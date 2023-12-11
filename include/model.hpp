@@ -13,16 +13,24 @@ namespace engine {
 	class Model {
 		public:
 			struct Vertex {
-				glm::vec3 position;
-				glm::vec3 color;
+				glm::vec3 position {};
+				glm::vec3 color {};
+				glm::vec3 normal {};
+				glm::vec2 uv {};
 
 				static std::vector<VkVertexInputBindingDescription> getBindingDescriptions();
 				static std::vector<VkVertexInputAttributeDescription> getAttributeDescriptions();
+
+				bool operator==(const Vertex& other) const {
+					return this->position == other.position && this->color == other.color && this->normal == other.normal && this->uv == other.uv;
+				}
 			};
 
 			struct Builder {
 				std::vector<Vertex> vertices {};
 				std::vector<uint32_t> indices {};
+
+				void loadModel(const std::string &filepath);
 			};
 
 			Model(EngineDevice& device, const Builder& builder);
@@ -33,6 +41,8 @@ namespace engine {
 
 			void bind(VkCommandBuffer command_buf);
 			void draw(VkCommandBuffer command_buf);
+
+			static std::unique_ptr<Model> createModelFromFile(EngineDevice& device, const std::string& filepath);
 
 		private:
 			EngineDevice& device_;

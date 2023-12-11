@@ -2,3 +2,4 @@
 .cache
 .env.cmake
 build
+assets/models/*
