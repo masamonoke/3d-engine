@@ -166,16 +166,12 @@ namespace engine {
 						attr.vertices[3 * index.vertex_index + 1],
 						attr.vertices[3 * index.vertex_index + 2]
 					};
-					size_t color_idx = 3 * index.vertex_index + 2;
-					if (color_idx < attr.colors.size()) {
-						vertex.color = {
-							attr.colors[color_idx - 2],
-							attr.colors[color_idx - 1],
-							attr.colors[color_idx - 0]
-						};
-					} else {
-						vertex.color = { 1.0f, 1.0f, 1.0f };
-					}
+
+					vertex.color = {
+						attr.colors[3 * index.vertex_index + 0],
+						attr.colors[3 * index.vertex_index + 1],
+						attr.colors[3 * index.vertex_index + 2]
+					};
 				}
 				if (index.normal_index >= 0) {
 					vertex.normal = {
@@ -190,7 +186,7 @@ namespace engine {
 						attr.texcoords[2 * index.texcoord_index + 1],
 					};
 				}
-				if (unique_vertices.count(vertex) == 0) {
+				if (!unique_vertices.contains(vertex)) {
 					unique_vertices[vertex] = static_cast<uint32_t>(vertices.size());
 					vertices.push_back(vertex);
 				}
