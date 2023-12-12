@@ -5,8 +5,8 @@
 namespace engine {
 
 	struct PushConstantData {
-		glm::mat4 transform { 1.f };
-		alignas(16) glm::vec3 color;
+		glm::mat4 transform { 1.0F };
+		glm::mat4 normalMatrix { 1.0F };
 	};
 
 	RenderSystem::RenderSystem(EngineDevice& device, VkRenderPass render_pass) : device_{ device }  {
@@ -26,8 +26,9 @@ namespace engine {
 
 		for (auto& obj : scene_objects) {
 			PushConstantData push {};
-			push.color = obj.color;
-			push.transform = projection_view * obj.transform.mat4();
+			auto model_matrix = obj.transform.mat4();
+			push.transform = projection_view * model_matrix;
+			push.normalMatrix = obj.transform.normalMatrix();
 			vkCmdPushConstants(
 				cmd_buf,
 				pipelineLayout_,

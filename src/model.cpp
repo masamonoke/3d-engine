@@ -83,7 +83,7 @@ namespace engine {
 			staging_buf_memory
 		);
 
-		void* data;
+		void* data = nullptr;
 		vkMapMemory(device_.device(), staging_buf_memory, 0, buf_size, 0, &data);
 		memcpy(data, indices.data(), static_cast<size_t>(buf_size));
 		vkUnmapMemory(device_.device(), staging_buf_memory);
@@ -99,6 +99,7 @@ namespace engine {
 		vkFreeMemory(device_.device(), staging_buf_memory, nullptr);
 }
 
+// NOLINTBEGIN
 	void Model::bind(VkCommandBuffer command_buf) {
 		VkBuffer buffers[] = { vertexBuffer_ };
 		VkDeviceSize offsets[] = { 0 };
@@ -107,8 +108,9 @@ namespace engine {
 			vkCmdBindIndexBuffer(command_buf, indexBuffer_, 0, VK_INDEX_TYPE_UINT32);
 		}
 	}
+// NOLINTEND
 
-	void Model::draw(VkCommandBuffer command_buf) {
+	void Model::draw(VkCommandBuffer command_buf) const {
 		if (hasIndexBuffer_) {
 			vkCmdDrawIndexed(command_buf, indexCount_, 1, 0, 0, 0);
 		} else {
@@ -125,15 +127,12 @@ namespace engine {
 	}
 
 	std::vector<VkVertexInputAttributeDescription> Model::Vertex::getAttributeDescriptions() {
-		std::vector<VkVertexInputAttributeDescription> attribute_descriptions(2);
-		attribute_descriptions[0].binding = 0;
-		attribute_descriptions[0].location = 0;
-		attribute_descriptions[0].format = VK_FORMAT_R32G32B32_SFLOAT;
-		attribute_descriptions[0].offset = offsetof(Vertex, position);
-		attribute_descriptions[1].binding = 0;
-		attribute_descriptions[1].location = 1;
-		attribute_descriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
-		attribute_descriptions[1].offset = offsetof(Vertex, color);
+		std::vector<VkVertexInputAttributeDescription> attribute_descriptions {};
+
+		attribute_descriptions.push_back({ 0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, position) });
+		attribute_descriptions.push_back({ 1, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, color) });
+		attribute_descriptions.push_back({ 2, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, normal) });
+		attribute_descriptions.push_back({ 3, 0, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, uv) });
 
 		return attribute_descriptions;
 	}

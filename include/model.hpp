@@ -40,7 +40,7 @@ namespace engine {
 			Model& operator=(const Model&) = delete;
 
 			void bind(VkCommandBuffer command_buf);
-			void draw(VkCommandBuffer command_buf);
+			void draw(VkCommandBuffer command_buf) const;
 
 			static std::unique_ptr<Model> createModelFromFile(EngineDevice& device, const std::string& filepath);
 

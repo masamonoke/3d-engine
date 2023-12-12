@@ -49,11 +49,11 @@ namespace engine {
 	}
 
 	void App::loadSceneObjects() {
-		std::shared_ptr<Model> model = Model::createModelFromFile(device_, "../assets/models/smooth_vase.obj");
+		const std::shared_ptr<Model> model = Model::createModelFromFile(device_, "../assets/models/flat_vase.obj");
 		auto obj = SceneObject::createObject();
 		obj.model = model;
-		obj.transform.translation = { 0.0f, 0.0f, 1.5f };
-		obj.transform.scale = { 0.5f, 0.5f, 0.5f };
+		obj.transform.translation = { 0.0F, 0.5f, 1.5f };
+		obj.transform.scale = { 2.5f, 2.5f, 2.5f };
 		sceneObjects_.push_back(std::move(obj));
 	}
 
