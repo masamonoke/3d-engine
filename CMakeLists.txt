@@ -35,6 +35,8 @@ add_executable(${PROJECT_NAME}
 	src/camera.cpp
 	src/keyboard_move_controller.cpp
 	src/scene_object.cpp
+	src/buffer.cpp
+	src/descriptor.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${TINYOJB_PATH})

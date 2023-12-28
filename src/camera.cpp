@@ -5,24 +5,26 @@
 
 namespace engine {
 
+	// NOLINTBEGIN
+
 	void Camera::orhographicProjection(float left, float right, float top, float bottom, float near, float far) {
-		projectionMatrix_ = glm::mat4{1.0f};
-		projectionMatrix_[0][0] = 2.f / (right - left);
-		projectionMatrix_[1][1] = 2.f / (bottom - top);
-		projectionMatrix_[2][2] = 1.f / (far - near);
+		projectionMatrix_ = glm::mat4{1.0F};
+		projectionMatrix_[0][0] = 2.F / (right - left);
+		projectionMatrix_[1][1] = 2.F / (bottom - top);
+		projectionMatrix_[2][2] = 1.F / (far - near);
 		projectionMatrix_[3][0] = -(right + left) / (right - left);
 		projectionMatrix_[3][1] = -(bottom + top) / (bottom - top);
 		projectionMatrix_[3][2] = -near / (far - near);
 	}
 
 	void Camera::perspectiveProjection(float fovy, float aspect, float near, float far) {
-		assert(glm::abs(aspect - std::numeric_limits<float>::epsilon()) > 0.0f);
-		const float tanHalfFovy = tan(fovy / 2.f);
-		projectionMatrix_ = glm::mat4{0.0f};
-		projectionMatrix_[0][0] = 1.f / (aspect * tanHalfFovy);
-		projectionMatrix_[1][1] = 1.f / (tanHalfFovy);
+		assert(glm::abs(aspect - std::numeric_limits<float>::epsilon()) > 0.0F);
+		const float tanHalfFovy = tan(fovy / 2.F);
+		projectionMatrix_ = glm::mat4{0.0F};
+		projectionMatrix_[0][0] = 1.F / (aspect * tanHalfFovy);
+		projectionMatrix_[1][1] = 1.F / (tanHalfFovy);
 		projectionMatrix_[2][2] = far / (far - near);
-		projectionMatrix_[2][3] = 1.f;
+		projectionMatrix_[2][3] = 1.F;
 		projectionMatrix_[3][2] = -(far * near) / (far - near);
 	}
 
@@ -31,7 +33,7 @@ namespace engine {
 		const glm::vec3 u{glm::normalize(glm::cross(w, up))};
 		const glm::vec3 v{glm::cross(w, u)};
 
-		viewMatrix_ = glm::mat4{1.f};
+		viewMatrix_ = glm::mat4{1.F};
 		viewMatrix_[0][0] = u.x;
 		viewMatrix_[1][0] = u.y;
 		viewMatrix_[2][0] = u.z;
@@ -60,7 +62,7 @@ namespace engine {
 		const glm::vec3 u{(c1 * c3 + s1 * s2 * s3), (c2 * s3), (c1 * s2 * s3 - c3 * s1)};
 		const glm::vec3 v{(c3 * s1 * s2 - c1 * s3), (c2 * c3), (c1 * c3 * s2 + s1 * s3)};
 		const glm::vec3 w{(c2 * s1), (-s2), (c1 * c2)};
-		viewMatrix_ = glm::mat4{1.f};
+		viewMatrix_ = glm::mat4{1.F};
 		viewMatrix_[0][0] = u.x;
 		viewMatrix_[1][0] = u.y;
 		viewMatrix_[2][0] = u.z;
@@ -74,5 +76,7 @@ namespace engine {
 		viewMatrix_[3][1] = -glm::dot(v, position);
 		viewMatrix_[3][2] = -glm::dot(w, position);
 	}
+
+	// NOLINTEND
 
 }

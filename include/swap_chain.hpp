@@ -10,6 +10,7 @@
 #include <memory>
 
 namespace engine {
+
 	class SwapChain {
 		public:
 			static constexpr int MAX_FRAMES = 2;
@@ -90,6 +91,7 @@ namespace engine {
 			VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
 			void init();
 	};
+
 }
 
 #endif // SWAP_CHAIN_HPP

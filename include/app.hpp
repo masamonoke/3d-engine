@@ -12,6 +12,7 @@
 #include "engine_device.hpp"
 #include "scene_object.hpp"
 #include "renderer.hpp"
+#include "descriptor.hpp"
 
 namespace engine {
 
@@ -24,6 +25,8 @@ namespace engine {
 			~App();
 			App(const App&) = delete;
 			App& operator=(const App&) = delete;
+			App(const App&&) = delete;
+			App&& operator=(const App&&) = delete;
 
 			void run();
 
@@ -32,6 +35,7 @@ namespace engine {
 			EngineDevice device_ { window_ };
 			std::vector<SceneObject> sceneObjects_;
 			Renderer renderer_ { window_, device_ };
+			std::unique_ptr<DescriptorPool> globalPool_ {};
 
 			void loadSceneObjects();
 	};

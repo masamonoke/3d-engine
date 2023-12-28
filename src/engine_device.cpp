@@ -8,52 +8,56 @@
 
 
 namespace engine {
-	static VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback(
-		VkDebugUtilsMessageSeverityFlagBitsEXT message_severity,
-		VkDebugUtilsMessageTypeFlagsEXT message_type,
-		const VkDebugUtilsMessengerCallbackDataEXT* callback_data,
-		void* user_data) {
-		UNUSED(message_type);
-		UNUSED(user_data);
-		switch (message_severity) {
-			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT:
-				std::cerr << "[DIAGNOSTIC] ";
-				break;
-			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT:
-				std::cerr << "[INFO] ";
-				break;
-			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT:
-				std::cerr << "[ERROR] ";
-				break;
-			case VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT:
-				std::cerr << "[WARNING] ";
-			default:
-				break;
-		}
-		std::cerr << "validation layer: " << callback_data->pMessage << std::endl;
-		return VK_FALSE;
-	}
 
-	static VkResult create_debug_utils_messenger_ext(
-		VkInstance instance,
-		const VkDebugUtilsMessengerCreateInfoEXT* create_info,
-		const VkAllocationCallbacks* allocator,
-		VkDebugUtilsMessengerEXT* debug_messenger) {
-		auto func = (PFN_vkCreateDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
-		if (func != nullptr) {
-			return func(instance, create_info, allocator, debug_messenger);
-		} else {
-			return VK_ERROR_EXTENSION_NOT_PRESENT;
-		}
-	}
+	namespace {
 
-	static void destroy_debug_utils_messenger_ext(
-		VkInstance instance,
-		VkDebugUtilsMessengerEXT debug_messenger,
-		const VkAllocationCallbacks* allocator) {
-		auto func = (PFN_vkDestroyDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT");
-		if (func != nullptr) {
-			func(instance, debug_messenger, allocator);
+		VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback(
+			VkDebugUtilsMessageSeverityFlagBitsEXT message_severity,
+			VkDebugUtilsMessageTypeFlagsEXT message_type,
+			const VkDebugUtilsMessengerCallbackDataEXT* callback_data,
+			void* user_data) {
+			UNUSED(message_type);
+			UNUSED(user_data);
+			switch (message_severity) {
+				case VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT:
+					std::cerr << "[DIAGNOSTIC] ";
+					break;
+				case VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT:
+					std::cerr << "[INFO] ";
+					break;
+				case VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT:
+					std::cerr << "[ERROR] ";
+					break;
+				case VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT:
+					std::cerr << "[WARNING] ";
+				default:
+					break;
+			}
+			std::cerr << "validation layer: " << callback_data->pMessage << std::endl;
+			return VK_FALSE;
+		}
+
+		VkResult create_debug_utils_messenger_ext(
+			VkInstance instance,
+			const VkDebugUtilsMessengerCreateInfoEXT* create_info,
+			const VkAllocationCallbacks* allocator,
+			VkDebugUtilsMessengerEXT* debug_messenger) {
+			auto func = (PFN_vkCreateDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
+			if (func != nullptr) {
+				return func(instance, create_info, allocator, debug_messenger);
+			} else {
+				return VK_ERROR_EXTENSION_NOT_PRESENT;
+			}
+		}
+
+		void destroy_debug_utils_messenger_ext(
+			VkInstance instance,
+			VkDebugUtilsMessengerEXT debug_messenger,
+			const VkAllocationCallbacks* allocator) {
+			auto func = (PFN_vkDestroyDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT");
+			if (func != nullptr) {
+				func(instance, debug_messenger, allocator);
+			}
 		}
 	}
 
@@ -144,8 +148,8 @@ namespace engine {
 	void EngineDevice::createLogicalDevice() {
 		auto indices = findQueueFamilies(physicalDevice_);
 		std::vector<VkDeviceQueueCreateInfo> queue_create_infos;
-		std::set<uint32_t> unique_queue_families = { indices.graphicsFamily, indices.presentFamily };
-		auto queue_priority = 1.f;
+		const std::set<uint32_t> unique_queue_families = { indices.graphicsFamily, indices.presentFamily };
+		auto queue_priority = 1.F;
 		for (const auto queue_family : unique_queue_families) {
 			VkDeviceQueueCreateInfo queue_create_info {};
 			queue_create_info.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
@@ -204,7 +208,7 @@ namespace engine {
 		}
 		VkPhysicalDeviceFeatures supported_features;
 		vkGetPhysicalDeviceFeatures(device, &supported_features);
-		return indices.isComplete() && extension_supported && swap_chain_adequate && supported_features.samplerAnisotropy;
+		return indices.isComplete() && extension_supported && swap_chain_adequate && supported_features.samplerAnisotropy != 0;
 	}
 
 	void EngineDevice::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& create_info) {
@@ -219,7 +223,7 @@ namespace engine {
 	}
 
 	bool EngineDevice::checkValidationLayerSupport() {
-		uint32_t layer_count;
+		uint32_t layer_count = {};
 		vkEnumerateInstanceLayerProperties(&layer_count, nullptr);
 		std::vector<VkLayerProperties> available_layers(layer_count);
 		vkEnumerateInstanceLayerProperties(&layer_count, available_layers.data());
@@ -240,7 +244,7 @@ namespace engine {
 
 	std::vector<const char*> EngineDevice::getRequiredExtensions() {
 		uint32_t glfw_extension_count = 0;
-		const char** glfw_extensions;
+		const char** glfw_extensions = {};
 		glfw_extensions = glfwGetRequiredInstanceExtensions(&glfw_extension_count);
 		std::vector<const char*> extensions(glfw_extensions, glfw_extensions + glfw_extension_count);
 		if (this->enabledValidationLayers) {
@@ -275,7 +279,7 @@ namespace engine {
 	}
 
 	bool EngineDevice::checkDeviceExtensionSupport(VkPhysicalDevice device) {
-		uint32_t extension_count;
+		uint32_t extension_count = {};
 		vkEnumerateDeviceExtensionProperties(device, nullptr, &extension_count, nullptr);
 		std::vector<VkExtensionProperties> available_extensions(extension_count);
 		vkEnumerateDeviceExtensionProperties(device, nullptr, &extension_count, available_extensions.data());
@@ -283,24 +287,25 @@ namespace engine {
 		for (const auto& extension : available_extensions) {
 			required_extenstions.erase(extension.extensionName);
 		}
-		return required_extenstions.empty();
+		auto res = required_extenstions.empty();
+		return res;
 	}
 
 	QueueFamilyIndices EngineDevice::findQueueFamilies(VkPhysicalDevice device) {
 		QueueFamilyIndices indices;
-		uint32_t queue_family_count;
+		uint32_t queue_family_count = {};
 		vkGetPhysicalDeviceQueueFamilyProperties(device, &queue_family_count, nullptr);
 		std::vector<VkQueueFamilyProperties> queue_families(queue_family_count);
 		vkGetPhysicalDeviceQueueFamilyProperties(device, &queue_family_count, queue_families.data());
 		int i = 0;
 		for (const auto& queue_family : queue_families) {
-			if (queue_family.queueCount > 0 && queue_family.queueFlags & VK_QUEUE_GRAPHICS_BIT) {
+			if (queue_family.queueCount > 0 && (queue_family.queueFlags & VK_QUEUE_GRAPHICS_BIT) != 0) {
 				indices.graphicsFamily = i;
 				indices.graphicsFamilyHasValue = true;
 			}
-			VkBool32 present_support = false;
+			VkBool32 present_support = 0;
 			vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface_, &present_support);
-			if (queue_family.queueCount > 0 && present_support) {
+			if (queue_family.queueCount > 0 && present_support != 0) {
 				indices.presentFamily = i;
 				indices.presentFamilyHasValue = true;
 			}
@@ -315,14 +320,14 @@ namespace engine {
 	SwapChainSupportDetails EngineDevice::querySwapChainSupport(VkPhysicalDevice device) {
 		SwapChainSupportDetails details;
 		vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface_, &details.capabilites);
-		uint32_t format_count;
+		uint32_t format_count = {};
 		vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface_, &format_count, nullptr);
 		if (format_count != 0) {
 			details.formats.resize(format_count);
 			vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface_, &format_count, details.formats.data());
 		}
 
-		uint32_t present_mode_count;
+		uint32_t present_mode_count = {};
 		vkGetPhysicalDeviceSurfacePresentModesKHR(device, surface_, &present_mode_count, nullptr);
 		if (present_mode_count != 0) {
 			details.presentModes.resize(present_mode_count);
@@ -375,7 +380,7 @@ namespace engine {
 		alloc_info.commandPool = commandPool_;
 		alloc_info.commandBufferCount = 1;
 
-		VkCommandBuffer command_buf;
+		VkCommandBuffer command_buf = {};
 		vkAllocateCommandBuffers(device_, &alloc_info, &command_buf);
 
 		VkCommandBufferBeginInfo begin_info {};

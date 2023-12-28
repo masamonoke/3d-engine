@@ -16,11 +16,11 @@ namespace engine {
 	};
 
 	struct QueueFamilyIndices {
-		uint32_t graphicsFamily;
-		uint32_t presentFamily;
+		uint32_t graphicsFamily = { 0 };
+		uint32_t presentFamily = { 0 };
 		bool graphicsFamilyHasValue = false;
 		bool presentFamilyHasValue = false;
-		bool isComplete() {
+		[[nodiscard]] bool isComplete() const {
 			return graphicsFamilyHasValue && presentFamilyHasValue;
 		}
 	};
@@ -30,11 +30,11 @@ namespace engine {
 #ifdef NDEBUG
 			const bool enabledValidationLayers = false;
 #else
-			const bool enabledValidationLayers = true;
+			const bool enabledValidationLayers = true; // NOLINT
 #endif
 			VkPhysicalDeviceProperties properties;
 
-			EngineDevice(Window& window);
+			explicit EngineDevice(Window& window);
 			~EngineDevice();
 
 			EngineDevice(const EngineDevice&) = delete;
@@ -67,8 +67,8 @@ namespace engine {
 			VkQueue graphicsQueue_;
 			VkQueue presentQueue_;
 			VkPhysicalDevice physicalDevice_ = VK_NULL_HANDLE;
-			const std::vector<const char*> validationLayers_ = { "VK_LAYER_KHRONOS_validation" };
-			const std::vector<const char*> deviceExtensions_ = { VK_KHR_SWAPCHAIN_EXTENSION_NAME, VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME };
+			const std::vector<const char*> validationLayers_ = { "VK_LAYER_KHRONOS_validation" }; // NOLINT
+			const std::vector<const char*> deviceExtensions_ = { VK_KHR_SWAPCHAIN_EXTENSION_NAME, VK_KHR_PORTABILITY_SUBSET_EXTENSION_NAME }; // NOLINT
 			VkInstance instance_;
 			VkDebugUtilsMessengerEXT debugMessenger_;
 

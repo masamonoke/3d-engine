@@ -10,6 +10,7 @@
 #include <cassert>
 
 namespace engine {
+
 	class Renderer {
 		public:
 			Renderer(Window& window, EngineDevice& device);
@@ -54,6 +55,7 @@ namespace engine {
 			void freeCmdBuffers();
 			void recreateSwapChain();
 	};
+
 }
 
 #endif // RENDERER_HPP

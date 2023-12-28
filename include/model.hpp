@@ -8,8 +8,10 @@
 #include <vector>
 
 #include "engine_device.hpp"
+#include "buffer.hpp"
 
 namespace engine {
+
 	class Model {
 		public:
 			struct Vertex {
@@ -47,19 +49,18 @@ namespace engine {
 		private:
 			EngineDevice& device_;
 
-			VkBuffer vertexBuffer_;
-			VkDeviceMemory vertexBufferMemory_;
+			std::unique_ptr<Buffer> vertexBuffer_;
 			uint32_t vertexCount_;
 
 			bool hasIndexBuffer_ = false;
-			VkBuffer indexBuffer_;
-			VkDeviceMemory indexBufferMemory_;
+			std::unique_ptr<Buffer> indexBuffer_;
 			uint32_t indexCount_;
 
 			void createVertexBuffers(const std::vector<Vertex>& vertices);
 			void createIndexBuffers(const std::vector<uint32_t>& indices);
 
 	};
+
 }
 
 #endif // MODEL_HPP

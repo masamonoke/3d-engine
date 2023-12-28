@@ -5,12 +5,12 @@
 namespace engine {
 
 	struct PushConstantData {
-		glm::mat4 transform { 1.0F };
+		glm::mat4 modelMatrix { 1.0F };
 		glm::mat4 normalMatrix { 1.0F };
 	};
 
-	RenderSystem::RenderSystem(EngineDevice& device, VkRenderPass render_pass) : device_{ device }  {
-		createPipelineLayout();
+	RenderSystem::RenderSystem(EngineDevice& device, VkRenderPass render_pass, VkDescriptorSetLayout global_set_layout) : device_{ device }  { // NOLINT
+		createPipelineLayout(global_set_layout);
 		createPipeline(render_pass);
 	}
 
@@ -19,39 +19,40 @@ namespace engine {
 	}
 
 
-	void RenderSystem::renderSceneObjects(VkCommandBuffer cmd_buf, std::vector<SceneObject>& scene_objects, const Camera& camera) {
-		pipeline_->bind(cmd_buf);
+	void RenderSystem::renderSceneObjects(FrameInfo& frame_info, std::vector<SceneObject>& scene_objects) {
+		pipeline_->bind(frame_info.cmdBuf);
 
-		auto projection_view = camera.projection() * camera.view();
+		vkCmdBindDescriptorSets(frame_info.cmdBuf, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout_, 0, 1, &frame_info.globalDescriptorSet, 0, nullptr);
 
 		for (auto& obj : scene_objects) {
 			PushConstantData push {};
-			auto model_matrix = obj.transform.mat4();
-			push.transform = projection_view * model_matrix;
+			push.modelMatrix = obj.transform.mat4();
 			push.normalMatrix = obj.transform.normalMatrix();
 			vkCmdPushConstants(
-				cmd_buf,
+				frame_info.cmdBuf,
 				pipelineLayout_,
 				VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
 				0,
 				sizeof(PushConstantData),
 				&push
 			);
-			obj.model->bind(cmd_buf);
-			obj.model->draw(cmd_buf);
+			obj.model->bind(frame_info.cmdBuf);
+			obj.model->draw(frame_info.cmdBuf);
 		}
 	}
 
-	void RenderSystem::createPipelineLayout() {
+	void RenderSystem::createPipelineLayout(VkDescriptorSetLayout global_set_layout) {
 		VkPushConstantRange pushConstantRange {};
 		pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
 		pushConstantRange.offset = 0;
 		pushConstantRange.size = sizeof(PushConstantData);
 
+		std::vector<VkDescriptorSetLayout> descriptor_set_layouts { global_set_layout };
+
 		VkPipelineLayoutCreateInfo layout_create_info {};
 		layout_create_info.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-		layout_create_info.setLayoutCount = 0;
-		layout_create_info.pSetLayouts = nullptr;
+		layout_create_info.setLayoutCount = static_cast<uint32_t>(descriptor_set_layouts.size());
+		layout_create_info.pSetLayouts = descriptor_set_layouts.data();
 		layout_create_info.pushConstantRangeCount = 1;
 		layout_create_info.pPushConstantRanges = &pushConstantRange;
 		if (vkCreatePipelineLayout(device_.device(), &layout_create_info, nullptr, &pipelineLayout_) != VK_SUCCESS) {
@@ -60,7 +61,7 @@ namespace engine {
 	}
 
 	void RenderSystem::createPipeline(VkRenderPass render_pass) {
-		assert(pipelineLayout_ != nullptr && "Cannot create pipeline before pipeline layout");
+		assert(pipelineLayout_ && "Cannot create pipeline before pipeline layout"); // NOLINT
 
 		PipelineConfigInfo pipeline_config = Pipeline::defaultPipelineConfigInfo();
 		pipeline_config.renderPass = render_pass;

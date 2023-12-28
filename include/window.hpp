@@ -6,6 +6,7 @@
 #include <string>
 
 namespace engine {
+
 	class Window {
 		public:
 			Window(int w, int h, std::string title);
@@ -38,6 +39,7 @@ namespace engine {
 			GLFWwindow* window_;
 			std::string title_;
 	};
+
 }
 
 #endif // WINDOW_H
