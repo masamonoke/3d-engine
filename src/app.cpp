@@ -13,9 +13,13 @@
 
 namespace engine {
 
+	const float INTENSITY = 0.02F;
+
 	struct GlobalUbo {
-		glm::mat4 projectionView { 1.0F };
-		glm::vec3 lightDirection = glm::normalize(glm::vec3 { 1.0F, -3.0F, -1.0F });
+		glm::mat4 projectionView { 1.F };
+		glm::vec4 ambientLightColor { 1.F, 1.F, 1.F, INTENSITY };
+		glm::vec3 lightPosition { -1.F, -1.F, -0.2F };
+		alignas(16) glm::vec4 lightColor { 1.F };
 	};
 
 	App::App() {
@@ -101,6 +105,13 @@ namespace engine {
 		obj.transform.translation = { 0.0F, 0.5F, 1.5F }; // NOLINT
 		obj.transform.scale = { 2.5F, 2.5F, 2.5F }; // NOLINT
 		sceneObjects_.push_back(std::move(obj));
+
+		const std::shared_ptr<Model> floor = Model::createModelFromFile(device_, "../assets/models/floor.obj");
+		auto floor_obj = SceneObject::createObject();
+		floor_obj.model = floor;
+		floor_obj.transform.translation = { 0.0F, 0.5F, 0.0F }; // NOLINT
+		floor_obj.transform.scale = { 2.5F, 2.5F, 2.5F }; // NOLINT
+		sceneObjects_.push_back(std::move(floor_obj));
 	}
 
 }
