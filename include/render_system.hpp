@@ -26,7 +26,7 @@ namespace engine {
 			RenderSystem(const RenderSystem&&) = delete;
 			RenderSystem &&operator=(const RenderSystem&&) = delete;
 
-			void renderSceneObjects(FrameInfo& frame_info, std::vector<SceneObject>& scene_objects);
+			void renderSceneObjects(FrameInfo& frame_info);
 
 		private:
 			EngineDevice& device_;

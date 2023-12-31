@@ -33,7 +33,8 @@ namespace engine {
 		private:
 			Window window_ { WIDTH, HEIGHT, "App" };
 			EngineDevice device_ { window_ };
-			std::vector<SceneObject> sceneObjects_;
+			/* std::vector<SceneObject> sceneObjects_; */
+			SceneObject::Map sceneObjects_;
 			Renderer renderer_ { window_, device_ };
 			std::unique_ptr<DescriptorPool> globalPool_ {};
 

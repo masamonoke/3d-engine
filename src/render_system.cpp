@@ -19,12 +19,16 @@ namespace engine {
 	}
 
 
-	void RenderSystem::renderSceneObjects(FrameInfo& frame_info, std::vector<SceneObject>& scene_objects) {
+	void RenderSystem::renderSceneObjects(FrameInfo& frame_info) {
 		pipeline_->bind(frame_info.cmdBuf);
 
 		vkCmdBindDescriptorSets(frame_info.cmdBuf, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout_, 0, 1, &frame_info.globalDescriptorSet, 0, nullptr);
 
-		for (auto& obj : scene_objects) {
+		for (auto& kv : frame_info.sceneObjects) {
+			auto& obj = kv.second;
+			if (obj.model == nullptr) {
+				continue;
+			}
 			PushConstantData push {};
 			push.modelMatrix = obj.transform.mat4();
 			push.normalMatrix = obj.transform.normalMatrix();

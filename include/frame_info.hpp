@@ -2,6 +2,7 @@
 #define FRAME_INFO_HPP
 
 #include "camera.hpp"
+#include <scene_object.hpp>
 
 #include <vulkan/vulkan.h>
 
@@ -13,6 +14,7 @@ namespace engine {
 		VkCommandBuffer cmdBuf;
 		Camera& camera;
 		VkDescriptorSet globalDescriptorSet;
+		SceneObject::Map& sceneObjects;
 	};
 
 }

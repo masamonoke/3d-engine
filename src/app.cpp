@@ -18,7 +18,7 @@ namespace engine {
 	struct GlobalUbo {
 		glm::mat4 projectionView { 1.F };
 		glm::vec4 ambientLightColor { 1.F, 1.F, 1.F, INTENSITY };
-		glm::vec3 lightPosition { -1.F, -1.F, -0.2F };
+		glm::vec3 lightPosition { -2.5F, -0.5F, -0.2F };
 		alignas(16) glm::vec4 lightColor { 1.F };
 	};
 
@@ -46,9 +46,11 @@ namespace engine {
 		}
 
 		auto global_set_layout = DescriptorSetLayout::Builder(device_)
-			.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
+			.addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS)
 			.build();
+
 		std::vector<VkDescriptorSet> global_descriptors_sets { SwapChain::MAX_FRAMES };
+
 		for (size_t i = 0; i < global_descriptors_sets.size(); i++) {
 			auto buffer_info = ubo_buffers[i]->decriptorInfo();
 			DescriptorWriter(*global_set_layout, *globalPool_)
@@ -87,10 +89,11 @@ namespace engine {
 					frame_time,
 					cmd_buf,
 					camera,
-					global_descriptors_sets[frame_idx]
+					global_descriptors_sets[frame_idx],
+					sceneObjects_
 				};
 				renderer_.beginSwapChainRenderPass(cmd_buf);
-				render.renderSceneObjects(frame_info, sceneObjects_);
+				render.renderSceneObjects(frame_info);
 				renderer_.endSwapChainRenderPass(cmd_buf);
 				renderer_.endFrame();
 			}
@@ -104,14 +107,14 @@ namespace engine {
 		obj.model = model;
 		obj.transform.translation = { 0.0F, 0.5F, 1.5F }; // NOLINT
 		obj.transform.scale = { 2.5F, 2.5F, 2.5F }; // NOLINT
-		sceneObjects_.push_back(std::move(obj));
+		sceneObjects_.emplace(obj.id(), std::move(obj));
 
 		const std::shared_ptr<Model> floor = Model::createModelFromFile(device_, "../assets/models/floor.obj");
 		auto floor_obj = SceneObject::createObject();
 		floor_obj.model = floor;
 		floor_obj.transform.translation = { 0.0F, 0.5F, 0.0F }; // NOLINT
 		floor_obj.transform.scale = { 2.5F, 2.5F, 2.5F }; // NOLINT
-		sceneObjects_.push_back(std::move(floor_obj));
+		sceneObjects_.emplace(floor_obj.id(), std::move(floor_obj));
 	}
 
 }

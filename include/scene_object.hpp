@@ -23,11 +23,13 @@ namespace engine {
 	class SceneObject {
 		public:
 			using id_t = unsigned int;
+			using Map = std::unordered_map<id_t, SceneObject>;
 
 			SceneObject(const SceneObject&) = delete;
 			SceneObject &operator=(const SceneObject&) = delete;
 			SceneObject(SceneObject&&) = default;
 			SceneObject &operator=(SceneObject&&) = default;
+			~SceneObject() = default;
 
 			static SceneObject createObject() {
 				static id_t current_id = 0;
