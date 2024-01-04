@@ -20,6 +20,8 @@ namespace engine {
 		uint32_t subpass = 0;
 		std::vector<VkDynamicState> dynamicStateEnables;
 		VkPipelineDynamicStateCreateInfo dynamamicStateInfo;
+		std::vector<VkVertexInputBindingDescription> bindingDescriptions {};
+		std::vector<VkVertexInputAttributeDescription> attributeDescriptions {};
 	};
 
 	class Pipeline {
@@ -28,6 +30,8 @@ namespace engine {
 			~Pipeline();
 			Pipeline(const Pipeline&) = delete;
 			Pipeline& operator=(const Pipeline&) = delete;
+			Pipeline(const Pipeline&&) = delete;
+			Pipeline&& operator=(const Pipeline&&) = delete;
 
 			static PipelineConfigInfo defaultPipelineConfigInfo();
 			void bind(VkCommandBuffer command_buffer);

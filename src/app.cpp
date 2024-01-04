@@ -10,17 +10,9 @@
 #include "camera.hpp"
 #include "keyboard_move_controller.hpp"
 #include "buffer.hpp"
+#include "point_light_system.hpp"
 
 namespace engine {
-
-	const float INTENSITY = 0.02F;
-
-	struct GlobalUbo {
-		glm::mat4 projectionView { 1.F };
-		glm::vec4 ambientLightColor { 1.F, 1.F, 1.F, INTENSITY };
-		glm::vec3 lightPosition { -2.5F, -0.5F, -0.2F };
-		alignas(16) glm::vec4 lightColor { 1.F };
-	};
 
 	App::App() {
 		globalPool_ = DescriptorPool::Builder(device_)
@@ -59,6 +51,7 @@ namespace engine {
 		}
 
 		RenderSystem render { device_, renderer_.swapChainRenderPass(), global_set_layout->descriptorSetLayout() };
+		PointLightSystem light_system { device_, renderer_.swapChainRenderPass(), global_set_layout->descriptorSetLayout() };
 		Camera camera {};
 		auto current_time = std::chrono::high_resolution_clock::now();
 		auto viewer_obj = SceneObject::createObject();
@@ -79,11 +72,6 @@ namespace engine {
 			if (auto* cmd_buf = renderer_.beginFrame()) {
 
 				const int frame_idx = renderer_.frameIdx();
-				GlobalUbo ubo {};
-				ubo.projectionView = camera.projection() * camera.view();
-				ubo_buffers[frame_idx]->writeToBuffer(&ubo);
-				ubo_buffers[frame_idx]->flush();
-
 				FrameInfo frame_info {
 					frame_idx,
 					frame_time,
@@ -92,8 +80,17 @@ namespace engine {
 					global_descriptors_sets[frame_idx],
 					sceneObjects_
 				};
+				GlobalUbo ubo {};
+
+				ubo.projection = camera.projection();
+				ubo.view = camera.view();
+				light_system.update(frame_info, ubo);
+				ubo_buffers[frame_idx]->writeToBuffer(&ubo);
+				ubo_buffers[frame_idx]->flush();
+
 				renderer_.beginSwapChainRenderPass(cmd_buf);
 				render.renderSceneObjects(frame_info);
+				light_system.render(frame_info);
 				renderer_.endSwapChainRenderPass(cmd_buf);
 				renderer_.endFrame();
 			}
@@ -115,6 +112,10 @@ namespace engine {
 		floor_obj.transform.translation = { 0.0F, 0.5F, 0.0F }; // NOLINT
 		floor_obj.transform.scale = { 2.5F, 2.5F, 2.5F }; // NOLINT
 		sceneObjects_.emplace(floor_obj.id(), std::move(floor_obj));
+
+		auto pointLight = SceneObject::createPointLight(0.2F);
+		pointLight.transform.translation = glm::vec4(-1.F, -1.F, -1.F, 1.F);
+		sceneObjects_.emplace(pointLight.id(), std::move(pointLight));
 	}
 
 }

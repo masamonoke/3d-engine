@@ -17,6 +17,22 @@ namespace engine {
 		SceneObject::Map& sceneObjects;
 	};
 
+	const float INTENSITY = 0.02F;
+	const int MAX_LIGHTS = 10;
+
+	struct PointLight {
+		glm::vec4 position {}; // ignore w
+		glm::vec4 color {}; // w is intensity
+	};
+
+	struct GlobalUbo {
+		glm::mat4 projection { 1.F };
+		glm::mat4 view { 1.F };
+		glm::vec4 ambientLightColor { 1.F, 1.F, 1.F, INTENSITY };
+		std::array<PointLight, MAX_LIGHTS> pointLights;
+		int lightsNum;
+	};
+
 }
 
 #endif // FRAME_INFO_HPP

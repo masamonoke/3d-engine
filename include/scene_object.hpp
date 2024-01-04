@@ -20,6 +20,10 @@ namespace engine {
 		glm::mat3 normalMatrix();
 	};
 
+	struct PointLightComponent {
+		float lightIntensity = 1.0F;
+	};
+
 	class SceneObject {
 		public:
 			using id_t = unsigned int;
@@ -36,7 +40,9 @@ namespace engine {
 				return SceneObject { current_id++ };
 			}
 
-			id_t id() const {
+			static SceneObject createPointLight(float intensity = 10.F, float radius = 0.1F, glm::vec3 color = glm::vec3(1.0F));
+
+			[[nodiscard]] id_t id() const {
 				return id_;
 			}
 
@@ -44,10 +50,12 @@ namespace engine {
 			glm::vec3 color {};
 			TransformComponent transform {};
 
+			std::unique_ptr<PointLightComponent> pointLight = nullptr;
+
 		private:
 			id_t id_;
 
-			SceneObject(id_t id) : id_(id) {}
+			explicit SceneObject(id_t id) : id_(id) {} // NOLINT
 	};
 
 }

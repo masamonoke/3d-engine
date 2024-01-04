@@ -9,7 +9,11 @@
 
 namespace engine {
 
-	Pipeline::Pipeline(EngineDevice& device, const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) : device_(device) {
+	Pipeline::Pipeline( // NOLINT
+		EngineDevice& device,
+		const std::string& vert_path,
+		const std::string& frag_path,
+		const PipelineConfigInfo& config_info) : device_(device) {
 		createGraphicsPipeline(vert_path, frag_path, config_info);
 	}
 
@@ -27,19 +31,20 @@ namespace engine {
 		auto size = static_cast<size_t>(file.tellg());
 		std::vector<char> buffer(size);
 		file.seekg(0);
-		file.read(buffer.data(), size);
+		file.read(buffer.data(), size); // NOLINT
 		file.close();
 		return buffer;
 	}
 
 	void Pipeline::createGraphicsPipeline(const std::string& vert_path, const std::string& frag_path, const PipelineConfigInfo& config_info) {
-		assert(config_info.pipelineLayout != VK_NULL_HANDLE && "Cannot create graphics pipeline: no pipeline layout provided");
-		assert(config_info.renderPass != VK_NULL_HANDLE && "Cannot create graphics pipeline: no render pass provided");
+		assert(config_info.pipelineLayout != VK_NULL_HANDLE && "Cannot create graphics pipeline: no pipeline layout provided"); // NOLINT
+		assert(config_info.renderPass != VK_NULL_HANDLE && "Cannot create graphics pipeline: no render pass provided"); // NOLINT
 		auto vert_code = readFile(vert_path);
 		auto frag_code = readFile(frag_path);
 		createShaderModule(vert_code, &vertShaderModule_);
 		createShaderModule(frag_code, &fragShaderModule_);
-		VkPipelineShaderStageCreateInfo shader_stages[2];
+
+		std::array<VkPipelineShaderStageCreateInfo, 2> shader_stages {};
 		shader_stages[0].sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
 		shader_stages[0].stage = VK_SHADER_STAGE_VERTEX_BIT;
 		shader_stages[0].module = vertShaderModule_;
@@ -55,8 +60,10 @@ namespace engine {
 		shader_stages[1].pNext = nullptr;
 		shader_stages[1].pSpecializationInfo = nullptr;
 
-		auto binding_descriptions = Model::Vertex::getBindingDescriptions();
-		auto attribute_descriptions = Model::Vertex::getAttributeDescriptions();
+		/* auto binding_descriptions = Model::Vertex::getBindingDescriptions(); */
+		/* auto attribute_descriptions = Model::Vertex::getAttributeDescriptions(); */
+		const auto& binding_descriptions = config_info.bindingDescriptions;
+		const auto& attribute_descriptions = config_info.attributeDescriptions;
 		VkPipelineVertexInputStateCreateInfo vertex_input_info {};
 		vertex_input_info.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
 		vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(attribute_descriptions.size());
@@ -67,7 +74,7 @@ namespace engine {
 		VkGraphicsPipelineCreateInfo pipeline_info {};
 		pipeline_info.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
 		pipeline_info.stageCount = 2;
-		pipeline_info.pStages = shader_stages;
+		pipeline_info.pStages = shader_stages.data();
 		pipeline_info.pVertexInputState = &vertex_input_info;
 		pipeline_info.pInputAssemblyState = &config_info.inputAssemblyInfo;
 		pipeline_info.pViewportState = &config_info.viewportInfo;
@@ -115,18 +122,18 @@ namespace engine {
 		config_info.rasterizationInfo.depthClampEnable = VK_FALSE;
 		config_info.rasterizationInfo.rasterizerDiscardEnable = VK_FALSE;
 		config_info.rasterizationInfo.polygonMode = VK_POLYGON_MODE_FILL;
-		config_info.rasterizationInfo.lineWidth = 1.0f;
+		config_info.rasterizationInfo.lineWidth = 1.0F;
 		config_info.rasterizationInfo.cullMode = VK_CULL_MODE_NONE;
 		config_info.rasterizationInfo.frontFace = VK_FRONT_FACE_CLOCKWISE;
 		config_info.rasterizationInfo.depthBiasEnable = VK_FALSE;
-		config_info.rasterizationInfo.depthBiasConstantFactor = 0.0f;
-		config_info.rasterizationInfo.depthBiasClamp = 0.0f;
-		config_info.rasterizationInfo.depthBiasSlopeFactor = 0.0f;
+		config_info.rasterizationInfo.depthBiasConstantFactor = 0.0F;
+		config_info.rasterizationInfo.depthBiasClamp = 0.0F;
+		config_info.rasterizationInfo.depthBiasSlopeFactor = 0.0F;
 
 		config_info.multisampleInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
 		config_info.multisampleInfo.sampleShadingEnable = VK_FALSE;
 		config_info.multisampleInfo.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
-		config_info.multisampleInfo.minSampleShading = 1.0f;
+		config_info.multisampleInfo.minSampleShading = 1.0F;
 		config_info.multisampleInfo.pSampleMask = nullptr;
 		config_info.multisampleInfo.alphaToCoverageEnable = VK_FALSE;
 		config_info.multisampleInfo.alphaToOneEnable = VK_FALSE;
@@ -145,18 +152,18 @@ namespace engine {
 		config_info.colorBlendInfo.logicOp = VK_LOGIC_OP_COPY;
 		config_info.colorBlendInfo.attachmentCount = 1;
 		config_info.colorBlendInfo.pAttachments = &config_info.colorBlendAttachment;
-		config_info.colorBlendInfo.blendConstants[0] = 0.0f;
-		config_info.colorBlendInfo.blendConstants[1] = 0.0f;
-		config_info.colorBlendInfo.blendConstants[2] = 0.0f;
-		config_info.colorBlendInfo.blendConstants[3] = 0.0f;
+		config_info.colorBlendInfo.blendConstants[0] = 0.0F;
+		config_info.colorBlendInfo.blendConstants[1] = 0.0F;
+		config_info.colorBlendInfo.blendConstants[2] = 0.0F;
+		config_info.colorBlendInfo.blendConstants[3] = 0.0F;
 
 		config_info.depthStencilInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
 		config_info.depthStencilInfo.depthTestEnable = VK_TRUE;
 		config_info.depthStencilInfo.depthWriteEnable = VK_TRUE;
 		config_info.depthStencilInfo.depthCompareOp = VK_COMPARE_OP_LESS;
 		config_info.depthStencilInfo.depthBoundsTestEnable = VK_FALSE;
-		config_info.depthStencilInfo.minDepthBounds = 0.0f;
-		config_info.depthStencilInfo.maxDepthBounds = 1.0f;
+		config_info.depthStencilInfo.minDepthBounds = 0.0F;
+		config_info.depthStencilInfo.maxDepthBounds = 1.0F;
 		config_info.depthStencilInfo.stencilTestEnable = VK_FALSE;
 		config_info.depthStencilInfo.front = {};
 		config_info.depthStencilInfo.back = {};
@@ -166,6 +173,10 @@ namespace engine {
 		config_info.dynamamicStateInfo.pDynamicStates = config_info.dynamicStateEnables.data();
 		config_info.dynamamicStateInfo.dynamicStateCount = static_cast<uint32_t>(config_info.dynamicStateEnables.size());
 		config_info.dynamamicStateInfo.flags = 0;
+
+		config_info.bindingDescriptions = Model::Vertex::getBindingDescriptions();
+		config_info.attributeDescriptions = Model::Vertex::getAttributeDescriptions();
+
 		return config_info;
 	}
 

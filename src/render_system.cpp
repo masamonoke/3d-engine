@@ -24,7 +24,7 @@ namespace engine {
 
 		vkCmdBindDescriptorSets(frame_info.cmdBuf, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout_, 0, 1, &frame_info.globalDescriptorSet, 0, nullptr);
 
-		for (auto& kv : frame_info.sceneObjects) {
+		for (auto& kv : frame_info.sceneObjects) { // NOLINT
 			auto& obj = kv.second;
 			if (obj.model == nullptr) {
 				continue;

@@ -68,4 +68,13 @@ namespace engine {
 	}
 	// NOLINTEND
 
+	SceneObject SceneObject::createPointLight(float intensity, float radius, glm::vec3 color) {
+		SceneObject obj = SceneObject::createObject();
+		obj.color = color;
+		obj.transform.scale.x = radius;
+		obj.pointLight = std::make_unique<PointLightComponent>();
+		obj.pointLight->lightIntensity = intensity;
+		return obj;
+	}
+
 }

@@ -37,6 +37,7 @@ add_executable(${PROJECT_NAME}
 	src/scene_object.cpp
 	src/buffer.cpp
 	src/descriptor.cpp
+	src/point_light_system.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${TINYOJB_PATH})
