@@ -28,6 +28,7 @@ namespace engine {
 	struct GlobalUbo {
 		glm::mat4 projection { 1.F };
 		glm::mat4 view { 1.F };
+		glm::mat4 inverseView { 1.0F };
 		glm::vec4 ambientLightColor { 1.F, 1.F, 1.F, INTENSITY };
 		std::array<PointLight, MAX_LIGHTS> pointLights;
 		int lightsNum;

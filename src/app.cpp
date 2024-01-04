@@ -84,6 +84,7 @@ namespace engine {
 
 				ubo.projection = camera.projection();
 				ubo.view = camera.view();
+				ubo.inverseView = camera.inverseView();
 				light_system.update(frame_info, ubo);
 				ubo_buffers[frame_idx]->writeToBuffer(&ubo);
 				ubo_buffers[frame_idx]->flush();

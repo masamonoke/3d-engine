@@ -19,6 +19,7 @@ struct PointLight {
 layout (set = 0, binding = 0) uniform GlobalUbo {
 	mat4 projection;
 	mat4 view;
+	mat4 inverseView;
 	vec4 ambientLightColor;
 	PointLight pointLights[10];
 	int lightsNum;
@@ -26,14 +27,28 @@ layout (set = 0, binding = 0) uniform GlobalUbo {
 
 void main() {
 	vec3 diffuseLight = ubo.ambientLightColor.xyz * ubo.ambientLightColor.w;
+	vec3 specularLight = vec3(0.0);
+
 	vec3 surfaceNormal = normalize(fragNormalWorld);
+	vec3 cameraPosWorld = ubo.inverseView[3].xyz;
+	vec3 viewDirection = normalize(cameraPosWorld - fragPosWorld);
+
 	for (int i = 0; i < ubo.lightsNum; i++) {
 		PointLight light = ubo.pointLights[i];
 		vec3 directionToLight = light.position.xyz - fragPosWorld;
 		float attenuation = 1.0 / dot(directionToLight, directionToLight);
-		float cosAngleIncidence = max(dot(surfaceNormal, normalize(directionToLight)), 0);
+		directionToLight = normalize(directionToLight);
+
+		float cosAngleIncidence = max(dot(surfaceNormal, directionToLight), 0);
 		vec3 intensity = light.color.xyz * light.color.w * attenuation;
 		diffuseLight += intensity * cosAngleIncidence;
+
+		// specular
+		vec3 halfAngle = normalize(directionToLight + viewDirection);
+		float blinnTerm = dot(surfaceNormal, halfAngle);
+		blinnTerm = clamp(blinnTerm, 0, 1);
+		blinnTerm = pow(blinnTerm, 512.0); // the more the degree the more specular contribution is etc. metals have more degree than some matte material
+		specularLight += intensity * blinnTerm;
 	}
-	outColor = vec4(diffuseLight * fragColor, 1.0);
+	outColor = vec4(diffuseLight * fragColor + specularLight * fragColor, 1.0);
 }

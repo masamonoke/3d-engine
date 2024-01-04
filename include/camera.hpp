@@ -11,6 +11,7 @@ namespace engine {
 		public:
 			[[nodiscard]] const glm::mat4& projection() const { return projectionMatrix_; }
 			[[nodiscard]] const glm::mat4& view() const { return viewMatrix_; }
+			[[nodiscard]] const glm::mat4& inverseView() const { return inverseViewMatrix_; }
 
 			void orhographicProjection(float left, float right, float top, float bottom, float near, float far);
 			void perspectiveProjection(float fovy, float aspect, float near, float far);
@@ -21,6 +22,7 @@ namespace engine {
 			private:
 			glm::mat4 projectionMatrix_ { 1.0F };
 			glm::mat4 viewMatrix_ { 1.0F };
+			glm::mat4 inverseViewMatrix_ { 1.0F };
 	};
 
 }
